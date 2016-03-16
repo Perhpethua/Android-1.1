@@ -1,6 +1,6 @@
-# Hello World PhoneGap Application [![bitHound Score][bithound-img]][bithound-url]
+# Hybrid HTML5 CSS3 JS Android PhoneGap Application
 
-> A Hello World application built with PhoneGap
+> A Twister android application built with PhoneGap
 
 ## Usage
 
