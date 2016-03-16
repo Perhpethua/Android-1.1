@@ -1,0 +1,64 @@
+*:focus {
+    outline: none;
+}
+body{
+	height:100%;
+	weight: 100%
+}
+.twistbtn {
+	background: url("../img/button.png") no-repeat center top;
+	z-index: 1;
+    height: 100px;
+	width: 100px;
+	border: none;
+	
+	position: absolute;
+	left: 145px;
+	top: 140px;
+	z-index:1;
+	
+}
+#lijr{
+	background: url("../img/lr.png");
+	z-index:1;
+	position:absolute;
+	left: 67px;
+	top: 67px;
+}
+#desr{
+	background: url("../img/dr.png");
+	z-index:1;
+	position:absolute;
+	left:192px;
+	top: 68px;
+}
+#dn{
+	z-index:1;
+	position:absolute;
+	left: 192px;
+	top:193px;
+}
+#ln{
+	z-index:1;
+	position:absolute;
+	left: 67px;
+	top: 193px;	
+}
+
+#crvena{
+	left: 0 px;
+	position:relative;
+}
+
+#zelena{
+	position:absolute;
+}
+#zuta{
+	position: absolute;
+	top: 195px;
+}
+
+#plava{
+	position:absolute;
+	top: 195px;
+}
