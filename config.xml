@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.phonegap.helloworld" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Hello World</name>
+    <name>Twister Wheel</name>
     <description>
-        Hello World sample application that responds to the deviceready event.
+        Hybrid HTML5 CSS3 JS Android Twister Wheel Application
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author email="nikolina.alajbeg@gmail.com" href="#">
+        Nikolina Alajbeg
     </author>
     <content src="index.html" />
     <preference name="permissions" value="none" />
@@ -16,6 +16,6 @@
     <preference name="android-minSdkVersion" value="14" />
 		
 	<preference name="SplashScreen" value="screen"/>
-	<preference name="SplashScreenDelay" value="3000"/>
+	<preference name="SplashScreenDelay" value="5000"/>
   
 </widget>
