@@ -1,6 +1,7 @@
 var degrees = 0;
 var looper, poljeElemenata, privremena, temp, vari = 0, String;
 var elem1, elem2, elem3, elem4, lijruk, desruk, lijnog, desnog, boja, bc;
+var setspeed;
 
 function ide(e1, e2, e3, e4, e5, e6, e7, e8, speed){
 	document.body.style.backgroundColor = "blue";
@@ -10,49 +11,99 @@ function ide(e1, e2, e3, e4, e5, e6, e7, e8, speed){
 	elem4 = document.getElementById(e4);//zelena
 	lijruk = document.getElementById(e5);//lijeva ruka
 	desruk = document.getElementById(e6);//desna ruka
-	desnog = document.getElementById(e7);//lijeva noga
-	lijnog = document.getElementById(e8);//desna noga
+	lijnog = document.getElementById(e7);//lijeva noga
+	desnog = document.getElementById(e8);//desna noga
+	setspeed = speed;
 	
 	poljeElemenata = [elem1, elem2, elem3, elem4, desruk, lijruk, desnog, lijnog];
 	console.log(poljeElemenata);
-	rotateAnimation(speed);
+	rotateAnimation(setspeed);
 }
-function rotateAnimation(speed){
+function rotateAnimation(setspeed){
 	
 	if(navigator.userAgent.match("Chrome")){
 		var i = 0;
 		for (i; i < poljeElemenata.length ; i++){
 			poljeElemenata[i].style.WebkitTransform = "rotate("+degrees+"deg)";
+			if(poljeElemenata[i] == lijruk || poljeElemenata[i] == elem2){//lijeva ruka i crvena (na istoj su strani)
+				poljeElemenata[i].style.webkitTransformOrigin = "100% 100%";
+			}else if(poljeElemenata[i] == desruk || poljeElemenata[i] == elem4){//desna ruka i zelena (na istoj su strani)
+				poljeElemenata[i].style.webkitTransformOrigin = "0% 100%";
+			}else if(poljeElemenata[i] == lijnog || poljeElemenata[i] == elem1){//lijeva noga i zuta (na istoj su strani)
+				poljeElemenata[i].style.webkitTransformOrigin = "100% 0%";
+			}else if(poljeElemenata[i] == desnog || poljeElemenata[i] == elem3){//desna noga i plava (na istoj su strani)
+				poljeElemenata[i].style.webkitTransformOrigin = "0% 0%";
+			}
 		}
 	} else if(navigator.userAgent.match("Firefox")){
 		var i = 0;
 		for (i; i < poljeElemenata.length ; i++){
 			poljeElemenata[i].style.MozTransform = "rotate("+degrees+"deg)";
+		
+			if(poljeElemenata[i] == lijruk || poljeElemenata[i] == elem2){//lijeva ruka i crvena (na istoj su strani)
+				poljeElemenata[i].style.MozTransformOrigin = "100% 100%";
+			}else if(poljeElemenata[i] == desruk || poljeElemenata[i] == elem4){//desna ruka i zelena (na istoj su strani)
+				poljeElemenata[i].style.MozTransformOrigin = "0% 100%";
+			}else if(poljeElemenata[i] == lijnog || poljeElemenata[i] == elem1){//lijeva noga i zuta (na istoj su strani)
+				poljeElemenata[i].style.MozTransformOrigin = "100% 0%";
+			}else if(poljeElemenata[i] == desnog || poljeElemenata[i] == elem3){//desna noga i plava (na istoj su strani)
+				poljeElemenata[i].style.MozTransformOrigin = "0% 0%";
+			}
 		}
 	} else if(navigator.userAgent.match("MSIE")){
 		var i = 0;
 		for (i; i < poljeElemenata.length ; i++){
 			poljeElemenata[i].style.msTransform = "rotate("+degrees+"deg)";
+			
+			if(poljeElemenata[i] == lijruk || poljeElemenata[i] == elem2){//lijeva ruka i crvena (na istoj su strani)
+				poljeElemenata[i].style.msTransformOrigin = "100% 100%";
+			}else if(poljeElemenata[i] == desruk || poljeElemenata[i] == elem4){//desna ruka i zelena (na istoj su strani)
+				poljeElemenata[i].style.msTransformOrigin = "0% 100%";
+			}else if(poljeElemenata[i] == lijnog || poljeElemenata[i] == elem1){//lijeva noga i zuta (na istoj su strani)
+				poljeElemenata[i].style.msTransformOrigin = "100% 0%";
+			}else if(poljeElemenata[i] == desnog || poljeElemenata[i] == elem3){//desna noga i plava (na istoj su strani)
+				poljeElemenata[i].style.msTransformOrigin = "0% 0%";
+			}
 		}
 	} else if(navigator.userAgent.match("Opera")){
 		var i = 0;
 		for (i; i < poljeElemenata.length ; i++){
 			poljeElemenata[i].style.OTransform = "rotate("+degrees+"deg)";
+			if(poljeElemenata[i] == lijruk || poljeElemenata[i] == elem2){//lijeva ruka i crvena (na istoj su strani)
+				poljeElemenata[i].style.webkitTransformOrigin = "100% 100%";
+			}else if(poljeElemenata[i] == desruk || poljeElemenata[i] == elem4){//desna ruka i zelena (na istoj su strani)
+				poljeElemenata[i].style.webkitTransformOrigin = "0% 100%";
+			}else if(poljeElemenata[i] == lijnog || poljeElemenata[i] == elem1){//lijeva noga i zuta (na istoj su strani)
+				poljeElemenata[i].style.webkitTransformOrigin = "100% 0%";
+			}else if(poljeElemenata[i] == desnog || poljeElemenata[i] == elem3){//desna noga i plava (na istoj su strani)
+				poljeElemenata[i].style.webkitTransformOrigin = "0% 0%";
+			}
 		}
 
 	}else{
 		var i = 0;
 		for( i; i < poljeElemenata.length; i++){
 			poljeElemenata[i].style.transform = "rotate("+degrees+"deg)";
+			
+			if(poljeElemenata[i] == lijruk || poljeElemenata[i] == elem2){//lijeva ruka i crvena (na istoj su strani)
+				poljeElemenata[i].style.transformOrigin = "100% 100%";
+			}else if(poljeElemenata[i] == desruk || poljeElemenata[i] == elem4){//desna ruka i zelena (na istoj su strani)
+				poljeElemenata[i].style.transformOrigin = "0% 100%";
+			}else if(poljeElemenata[i] == lijnog || poljeElemenata[i] == elem1){//lijeva noga i zuta (na istoj su strani)
+				poljeElemenata[i].style.transformOrigin = "100% 0%";
+			}else if(poljeElemenata[i] == desnog || poljeElemenata[i] == elem3){//desna noga i plava (na istoj su strani)
+				poljeElemenata[i].style.transformOrigin = "0% 0%";
+			}
 		}
 	}
 			
-	looper = setTimeout('rotateAnimation('+speed+')',speed);
+	looper = setTimeout('rotateAnimation('+setspeed+')',setspeed);
 	degrees++;
 
 	if(degrees == 361){
 		clearTimeout(looper);
 		degrees = 0;
+		staPise();
 		console.log(poljeElemenata);
 		uvecajSmanji();
 	}
@@ -83,8 +134,7 @@ function uvecajSmanji(){
 				poljeElemenata[i].style.OTransform = "scale("+vari+")"; //Opera
 			}else{
 				poljeElemenata[i].style.transform = "scale("+vari+")";
-			}
-				
+			}	
 		}
 	}
 }
@@ -121,7 +171,6 @@ function staPise(){
 	}else if(String.indexOf("lijeva noga") > 0){
 		temp = lijnog;
 	}
-	
 }
 /*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/		
 		
