@@ -1,0 +1,87 @@
+@media screen and (max-width: 600px) and (max-height: 800px){
+
+	nav{
+		float: left;
+		position: relative;
+		margin-left: 0px;
+	}
+	nav ul{
+		
+		padding-left: 0px;
+		margin-left: 0px;
+		width: 100%;
+	}
+	nav ul li{
+		width: 100%;
+		display: none;
+		outline: solid #ccc 1px;
+		
+	}
+	ul li a{
+		width: 100%;
+		text-align: center;
+		
+	}
+	ul li a:hover{
+
+	}
+	#lijr{
+	background: url("../img/lr.png");
+	z-index:1;
+	position:absolute;
+	left: 33%;
+	top: 34%;
+	}
+	#desr{
+		background: url("../img/dr.png");
+		z-index:1;
+		position:absolute;
+		left: 53%;
+		top: 34%;
+	}
+	#dn{
+		background: url("../img/dn.png");
+		z-index:1;
+		position:absolute;
+		left: 53%;
+		top: 51.5%;
+	}
+	#ln{
+		background: url("../img/ln.png");
+		z-index:1;
+		position:absolute;
+		left: 33%;
+		top: 51.5%;
+	}
+
+	#crvena{
+		left: 31%;
+		top: 30%;
+		position:absolute;
+		content: url("../img/crvena.png");
+	}
+
+	#zelena{
+		position:absolute;
+		left: 54%;
+		top: 30%;
+		content: url("../img/zelena.png");
+	}
+	#zuta{
+		position: absolute;
+		left: 31%;
+		top: 51.5%;
+		content: url("../img/zuta.png");
+	}
+
+	#plava{
+		position:absolute;
+		left: 54%;
+		top: 51.5%;
+		content: url("../img/plava.png");
+	}
+
+	footer{
+		padding-bottom: 0px;
+	}
+}

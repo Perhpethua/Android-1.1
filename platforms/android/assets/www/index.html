@@ -27,6 +27,7 @@
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel = "import" href= "components/bower_components/core-toolbar/core-toolbar.html">
         <title>Twister</title>
 		
 		<!--my scripts-->
@@ -34,22 +35,21 @@
 		<script type="text/javascript" src="js/zavrsti.js"></script>
 		
     </head>
-    <body class="randomf" id="body"> 
-            
-			<img id="zuta" src="img/zuta.png" alt="zuta">
-			<img id="crvena" src="img/crvena.png" alt="crvena">
-			<img id="plava" src="img/plava.png" alt="plava">
-			<img id="zelena" src="img/zelena.png" alt="zelena">
+    <body> 
+		<core-toolbar></core-toolbar>
+     
+		<img id="zuta" src="img/zuta.png" alt="zuta">
+		<img id="crvena" src="img/crvena.png" alt="crvena">
+		<img id="plava" src="img/plava.png" alt="plava">
+		<img id="zelena" src="img/zelena.png" alt="zelena">
 			
-			<img id="lijr" src="img/lr.png" alt="lijevaRuka">
-			<img id="desr" src="img/dr.png" alt="desnaRuka">
-			<img id="ln" src="img/ln.png" alt="lijevaNoga">
-			<img id="dn" src="img/dn.png" alt="desnaNoga">
-				
-			<button id="botunt" class="twistbtn" onclick="ide('zuta','crvena','plava','zelena','lijr','desr' ,'ln', 'dn', 2)"></button>
-			
-			
-      
+		<img id="lijr" src="img/lr.png" alt="lijevaRuka">
+		<img id="desr" src="img/dr.png" alt="desnaRuka">
+		<img id="ln" src="img/ln.png" alt="lijevaNoga">
+		<img id="dn" src="img/dn.png" alt="desnaNoga">	
+					
+		<button id="botunt" class="twistbtn" onclick="ide('zuta','crvena','plava','zelena','lijr','desr' ,'ln', 'dn', 2)"></button>
+			    
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">

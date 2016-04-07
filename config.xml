@@ -8,6 +8,9 @@
         Nikolina Alajbeg
     </author>
     <content src="index.html" />
+<!--dodano zbog cordova plugin add cordova-plugin-media -->
+	<preference name="AndroidPersistentFileLocation" value="Compatibility" />
+
     <preference name="permissions" value="none" />
     <preference name="phonegap-version" value="3.7.0" />
     <preference name="orientation" value="default" />

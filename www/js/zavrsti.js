@@ -2,9 +2,12 @@ var degrees = 0;
 var looper, poljeElemenata, privremena, temp, vari = 0, String;
 var elem1, elem2, elem3, elem4, lijruk, desruk, lijnog, desnog, boja, bc;
 var setspeed;
-
+/*added sound effect*/
+var bleep = new Audio(); //new Audio instance
+bleep.src = "mp3/2.mp3"
+/*---------------------------------------------*/
 function ide(e1, e2, e3, e4, e5, e6, e7, e8, speed){
-	document.body.style.backgroundColor = "blue";
+	document.body.style.backgroundColor = "#484848";//changes color when spinning
 	elem1 = document.getElementById(e1);//zuta
 	elem2 = document.getElementById(e2);//crvena
 	elem3 = document.getElementById(e3);//plava
@@ -14,7 +17,9 @@ function ide(e1, e2, e3, e4, e5, e6, e7, e8, speed){
 	lijnog = document.getElementById(e7);//lijeva noga
 	desnog = document.getElementById(e8);//desna noga
 	setspeed = speed;
-	
+	/* added sound on button twist*/
+	bleep.play();
+	/*-----------------------------*/
 	poljeElemenata = [elem1, elem2, elem3, elem4, desruk, lijruk, desnog, lijnog];
 	console.log(poljeElemenata);
 	rotateAnimation(setspeed);
@@ -147,19 +152,19 @@ function staPise(){
 
 	if(String.indexOf("zeleno") > 0){//postavljanje boja u varijablu privremena
 		privremena = elem4;
-		document.body.style.backgroundColor = "green";
+		document.body.style.backgroundImage = "url('img/greenc.jpg')";//green
 	}else if(String.indexOf("zuto") > 0){
 		privremena = elem1;
-		document.body.style.backgroundColor = "yellow";
+		document.body.style.backgroundImage = "url('img/yellowc.jpg')";//yellow
 	}else if(String.indexOf("crveno") > 0){
 		privremena = elem2; 
-		document.body.style.backgroundColor = "red";
+		document.body.style.backgroundImage = "url('img/redc.jpg')";//red
 	}else if(String.indexOf("plavo") > 0){
 		privremena = elem3;
-		document.body.style.backgroundColor = "blue";
+		document.body.style.backgroundImage = "url('img/bluec.jpg')";//blue
 	}else if(String.indexOf("zrak") > 0){
 		privremena = 0;
-		document.body.style.backgroundColor = "white";
+		document.body.style.backgroundImage = "url('img/whitec.jpg')";
 	}
   
 	if(String.indexOf("desna ruka") > 0){// postavljanje nogu i ruku u temp varijablu

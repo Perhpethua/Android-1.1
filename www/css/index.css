@@ -1,9 +1,89 @@
 *:focus {
     outline: none;
 }
-body{
-	height:100%;
-	weight: 100%
+/*-----------------------reset css--------------------------*/
+html, body, header{
+	
+	height:100% !important;
+	width: 100% !important;
+	
+	padding: 0;
+	margin: 0;
+	font-family: 'helvetica neue', helvetica;
+}
+ol, ul{list-style: none;}
+/*-----------------------------------------------------------*/
+header{
+	background: #d3d3d3;
+	text-align: center;
+	width: 100%;
+}
+*#headerlogo{
+	text-align: center;
+	display: block;
+	background: url("/icon.png");
+	background-repeat: no-repeat;
+	width: 72px;
+	height: 72px;
+	z-index: 1;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	padding-left: 45%;
+	padding-right: 45%; 
+}
+#main-wrapper{
+	min-height: 100%;
+	position: relative;
+}
+
+/* ===============================SLIKE====================================*/
+.udovi{ 
+	margin-top: 13%; /* move from top*/
+	margin-bottom: 15%; /*move from bottom*/
+}
+/* ===========================FOOTER=======================================*/
+footer{
+	position: absolute;
+	clear: both;
+	background: #777777;
+	height: auto; /*automatski dodjeljiva visinu ovisno o sadržaju i njegovoj visini*/
+	width: 100% !important;
+	left: 0px;
+	bottom: 0px;
+}
+small{
+	text-align: center;
+	color: #ccc;
+	float: left;
+	margin-top: 5px; /*udaljenost texta od vrha footera*/
+	margin-bottom: 2px; /*udaljenost texta od dna*/
+	margin-left: 30%; /*margin left i right pomiču text od rubova footera*/
+	margin-right: 30%;
+}
+/*=====================NAVIGATION=====================================================*/
+nav{
+	float: left;
+	margin-left: 10px;
+	position: relative; /* da bi navigacija isla preko contenta */
+	z-index: 1000; /* da bi navigacija isla preko contenta */
+}
+nav ul{
+	float: left;
+	list-style: none;
+	padding-left: 5px;
+}
+nav ul li {
+	display: none;
+	width: auto;
+
+}
+nav ul li a {
+	color: #FFF;
+	text-decoration: none;
+
+}
+nav ul li a:hover{
+	text-decoration: underline;
 }
 .twistbtn {
 	background: url("../img/button.png") no-repeat center top;
@@ -11,54 +91,23 @@ body{
     height: 100px;
 	width: 100px;
 	border: none;
-	
+	text-align: center;
 	position: absolute;
-	left: 145px;
-	top: 140px;
-	z-index:1;
-	
+	left: 46.5%;
+	top: 45%;
 }
-#lijr{
-	background: url("../img/lr.png");
-	z-index:1;
-	position:absolute;
-	left: 67px;
-	top: 67px;
+/*=======================================================================================*/
+.open{
+	background: url("../img/menubtn1.png") !important;
+	width: 24px;
+	height: 24px;
 }
-#desr{
-	background: url("../img/dr.png");
-	z-index:1;
-	position:absolute;
-	left:192px;
-	top: 68px;
-}
-#dn{
-	z-index:1;
-	position:absolute;
-	left: 192px;
-	top:193px;
-}
-#ln{
-	z-index:1;
-	position:absolute;
-	left: 67px;
-	top: 193px;	
+/*===========================RESPONSIVE==================================================*/
+/* files 320.css, 600.css, 1024.css, 1366.css */
+/*=======================================================================================*/
+
+section.press button{
+	height: 120px;
+	width: 120px;
 }
 
-#crvena{
-	left: 0 px;
-	position:relative;
-}
-
-#zelena{
-	position:absolute;
-}
-#zuta{
-	position: absolute;
-	top: 195px;
-}
-
-#plava{
-	position:absolute;
-	top: 195px;
-}

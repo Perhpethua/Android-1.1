@@ -9,6 +9,13 @@
         <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="File">
+        <param name="android-package" value="org.apache.cordova.file.FileUtils" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Media">
+        <param name="android-package" value="org.apache.cordova.media.AudioHandler" />
+    </feature>
     <name>Twister Wheel</name>
     <description>
         Hybrid HTML5 CSS3 JS Android Twister Wheel Application
@@ -17,6 +24,7 @@
         Nikolina Alajbeg
     </author>
     <content src="index.html" />
+    <preference name="AndroidPersistentFileLocation" value="Compatibility" />
     <preference name="permissions" value="none" />
     <preference name="phonegap-version" value="3.7.0" />
     <preference name="orientation" value="default" />

@@ -1,9 +1,11 @@
 *:focus {
     outline: none;
 }
-body{
-	height:100%;
-	weight: 100%
+html, body{
+	
+	height:100% !important;
+	width: 100% !important;
+	
 }
 .twistbtn {
 	background: url("../img/button.png") no-repeat center top;
@@ -13,8 +15,12 @@ body{
 	border: none;
 	
 	position: absolute;
+	top: 61%;
+	left: 55.9%;
+	/*
 	left: 145px;
 	top: 140px;
+	*/
 	z-index:1;
 	
 }
@@ -22,43 +28,64 @@ body{
 	background: url("../img/lr.png");
 	z-index:1;
 	position:absolute;
-	left: 67px;
+	left: 50%;
+	top: 50%;
+/*	left: 67px;
 	top: 67px;
+*/
 }
 #desr{
 	background: url("../img/dr.png");
 	z-index:1;
 	position:absolute;
-	left:192px;
+	left: 59.3%;
+	top: 50%;
+/*	left:192px;
 	top: 68px;
+	*/
 }
 #dn{
 	z-index:1;
 	position:absolute;
+	left: 59.3%;
+	top: 69.5%;
+	/*
 	left: 192px;
 	top:193px;
+	*/
 }
 #ln{
 	z-index:1;
 	position:absolute;
-	left: 67px;
+	top: 69.5%;
+	left: 50%;
+	/*left: 67px;
 	top: 193px;	
+	*/
 }
 
 #crvena{
-	left: 0 px;
+	/*left: 0 px;*/
+	left: 50%;
+	top: 50%;
 	position:relative;
 }
 
 #zelena{
 	position:absolute;
+	left: 59.3%;
+	top: 50%;
 }
 #zuta{
 	position: absolute;
-	top: 195px;
+/*	top: 195px;*/
+	top: 69.5%;
+	left: 50%;
 }
 
 #plava{
 	position:absolute;
-	top: 195px;
+	/*top: 195px;*/
+	left: 59.3%;
+	top: 69.5%;
 }
