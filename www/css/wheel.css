@@ -14,11 +14,23 @@ html, body, header{
 ol, ul{list-style: none;}
 /*-----------------------------------------------------------*/
 header{
-	background: #d3d3d3;
+	background: url("../img/info.jpg") center center;
+	background-size: cover;
 	text-align: center;
 	width: 100%;
+	z-index: 1000 !important;
 }
-*#headerlogo{
+#menubtn{
+		
+	background: url("../img/menubtn.png") no-repeat center top;
+	width: 24px;
+	height: 24px;
+	border: none;
+	float: left;
+	margin-top: 2%;
+	margin-left: 2%;
+	}
+#headerlogo{
 	text-align: center;
 	display: block;
 	background: url("/icon.png");
@@ -26,7 +38,7 @@ header{
 	width: 72px;
 	height: 72px;
 	z-index: 1;
-	padding-top: 1%;
+	padding-top: 20px;
 	padding-bottom: 1%;
 	padding-left: 45%;
 	padding-right: 45%; 
@@ -45,7 +57,8 @@ header{
 footer{
 	position: absolute;
 	clear: both;
-	background: #777777;
+	background: url("../img/info.jpg") center center;
+	background-size: cover;
 	height: auto; /*automatski dodjeljiva visinu ovisno o sadržaju i njegovoj visini*/
 	width: 100% !important;
 	left: 0px;
@@ -62,13 +75,14 @@ small{
 }
 /*=====================NAVIGATION=====================================================*/
 nav{
-	float: left;
-	margin-left: 10px;
+	/*float: left;*/
+	/*margin-left: 10px;*/
+	text-transform: uppercase;
 	position: relative; /* da bi navigacija isla preko contenta */
 	z-index: 1000; /* da bi navigacija isla preko contenta */
+	background: #484848;
 }
 nav ul{
-	float: left;
 	list-style: none;
 	padding-left: 5px;
 }
@@ -83,7 +97,7 @@ nav ul li a {
 
 }
 nav ul li a:hover{
-	text-decoration: underline;
+	color: black;
 }
 .twistbtn {
 	background: url("../img/button.png") no-repeat center top;
