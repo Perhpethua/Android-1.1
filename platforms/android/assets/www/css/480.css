@@ -1,0 +1,95 @@
+@media screen and (min-device-width:321px) and (max-device-width:480px) and (max-device-height:800px){
+
+	.twistbtn {
+		margin-left: 0px;
+		margin-right: 40px;
+	}
+	#headerlogo{
+		padding-top: 2px !important;
+		padding-right: 100px !important;
+		padding-left: 100px !important;
+	}
+	.udovi{ 
+		margin-top: 75%; /* move from top*/
+	}
+	/*=======================PRIKAZ REZULTATA=========================================*/
+	#textResult{
+		margin-top: 450px;
+	}
+	#result{
+		width: 200px;
+		font-weight: bold;
+		/*border: none;*/
+	}
+/* ===========================FOOTER=======================================*/
+	#lijr{
+		background: url("../img/lr.png");
+		z-index:1;
+		position:absolute;
+		left: 24% !important;
+		top: 31% !important;
+	}
+	#desr{
+		background: url("../img/dr.png");
+		z-index:1;
+		position:absolute;
+		left: 50.5% !important;
+		top: 31% !important;
+	}
+	#dn{
+		background: url("../img/dn.png");
+		z-index:1;
+		position:absolute;
+		left: 50.5% !important;
+		top: 54% !important;
+	}
+	#ln{
+		background: url("../img/ln.png");
+		z-index:1;
+		position:absolute;
+		left: 24% !important;
+		top: 54% !important;
+	}
+
+	#crvena{
+		left: 21% !important;
+		top: 28.5% !important;
+		position:absolute;
+		content: url("../img/crvena320.png");
+	}
+
+	#zelena{
+		position:absolute;
+		left: 50% !important;
+		top: 28.5% !important;
+		content: url("../img/zelena320.png");
+	}
+	#zuta{
+		position: absolute;
+		left: 21% !important;
+		top: 53.9% !important;
+		content: url("../img/zuta320.png");
+	}
+
+	#plava{
+		position:absolute;
+		left: 50% !important;
+		top: 53.9% !important;
+		content: url("../img/plava320.png");
+	}
+	.twistbtn {
+		background: url("../img/button.png") no-repeat center top;
+		z-index: 1000;
+	    height: 100px;
+		width: 100px;
+		border: none;
+		text-align: center;
+		position: absolute;
+		left: 40% !important;
+		top: 45% !important;
+	}
+
+	footer{
+		display: none;
+	}
+}

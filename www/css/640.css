@@ -1,0 +1,115 @@
+@media screen and (max-device-width: 640px){
+	
+	
+	.udovi{
+		width: 100% !important;
+		height: 
+	}
+	#textResult{
+		width: 100% !important;
+		margin-top: 400px !important;
+		text-align: center;
+	}
+	#headerlogo{
+		padding-left: 115px !important;
+		padding-right: 125px !important;
+		padding-top: 15px !important;
+	}
+/*=========================================================UDOVI======================================================================*/
+	#lijr{
+		background: url("../img/lr.png");
+		z-index:1;
+		position:absolute;
+		left: 16.5% !important ;
+		top: 40% !important;
+	}
+	#desr{
+		background: url("../img/dr.png");
+		z-index:1;
+		position:absolute;
+		left: 51% !important;
+		top: 40% !important;
+	}
+	#dn{
+		background: url("../img/dn.png");
+		z-index:1;
+		position:absolute;
+		left: 51% !important;
+		top: 64% !important;
+	}
+	#ln{
+		background: url("../img/ln.png");
+		z-index:1;
+		position:absolute;
+		left: 16.5% !important;
+		top: 64% !important;
+	}
+
+	#crvena{
+		left: 24% !important;
+		top: 45% !important;
+		position:absolute;
+		content: url("../img/crvena320.png");
+	}
+
+	#zelena{
+		position:absolute;
+		left: 52% !important;
+		top: 45% !important;
+		content: url("../img/zelena320.png");
+	}
+	#zuta{
+		position: absolute;
+		left: 24% !important;
+		top: 64% !important;
+		content: url("../img/zuta320.png");
+	}
+
+	#plava{
+		position:absolute;
+		left: 52% !important;
+		top: 64% !important;
+		content: url("../img/plava320.png");
+	}
+	.twistbtn {
+		background: url("../img/button.png") no-repeat center top;
+		z-index: 1000;
+	    height: 100px;
+		width: 100px;
+		border: none;
+		left: 38% !important;
+		top: 55% !important;
+	}
+	footer{
+		display: none;
+	}
+	nav ul li{
+		padding-bottom: 65px !important;
+		padding-top: 65px !important;
+
+	}
+}
+/*=========================================================NAVIGACIJA=================================================================*/
+
+@media screen and (min-device-width: 320px) and (max-device-width: 640px){
+
+	nav ul li{
+		padding-bottom: 35px;
+		padding-top: 35px;
+
+	}
+	nav ul li a:hover{
+		background-color: transparent;
+	}
+	nav ul li a {
+		color: #FFF;
+		text-decoration: none;
+		display: block;
+		padding-bottom: 0px !important;
+		padding-top: 0px !important;
+		letter-spacing: 2px !important;
+		font-size: 16px;
+
+	}
+}	
+	

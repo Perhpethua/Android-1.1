@@ -70,14 +70,13 @@ function prikazi(){
 	provjeriUdove();
 	return radno_polje[randombr];
 	
-/*return document.querySelector('.randomf').innerHTML = radno_polje[randombr]; 
+//return document.querySelector('.randomf').innerHTML = radno_polje[randombr]; 
 //querySelector - Get the first element in the document with named class -> '.randomf'*/
 }
 
 function provjeriUdove(){
 	
-	for(var i = 0; i < 20 ; i++)
-	{
+	for(var i = 0; i < 20 ; i++){
 		radno_polje[i] = opcije[i];
 	}
 	console.log(radno_polje);

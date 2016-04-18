@@ -1,0 +1,208 @@
+*:focus {
+    outline: none;
+}
+/*-----------------------reset css--------------------------*/
+html, body, header{
+	
+	height:100% !important;
+	width: 100% !important;
+	
+	padding: 0;
+	margin: 0;
+	font-family: 'helvetica neue', helvetica;
+}
+ol, ul{list-style: none;}
+/*-----------------------------------------------------------*/
+
+header{
+	background: url("../img/info.jpg") center center;
+	background-size: cover;
+	text-align: center;
+	width: 100%;
+	z-index: 1000 !important;
+}
+#menubtn{
+		
+	background: url("../img/menubtn.png") no-repeat center top;
+	width: 24px;
+	height: 24px;
+	border: none;
+	float: left;
+	margin-top: 2%;
+	margin-left: 4%;
+	}
+#headerlogo{
+	background: url("/icon.png");
+	text-align: center;
+	display: block;
+	background-repeat: no-repeat;
+	width: 72px;
+	height: 72px;
+	z-index: 1000;
+	padding-top: 20px;
+	padding-bottom: 1%;
+	padding-left: 43%;
+	padding-right: 43%; 
+	margin: 0px;
+}
+#main-wrapper{
+	width: 100%;
+	position: relative;
+
+}
+
+/* ===============================SLIKE====================================*/
+.udovi{ 
+	margin-top: 300px; /* move from top*/
+	margin-bottom: 15%; /*move from bottom*/
+}
+#crvena, #zelena, #plava, #zuta, #lijr, #desr, #ln, #dn, #botunt{
+	z-index: -1000 !important; /* da elementi budu ispod navigacije kad se pojavi */
+}
+/*=======================PRIKAZ REZULTATA=========================================*/
+#textResult{
+	margin-top: 400px;
+	margin-left: 0%;
+	margin-right: 0%;
+	text-align: center;
+}
+#result{
+	border-radius: 9px;
+	width: 200px;
+	font-weight: bold;
+	/*border: none;*/ /* odkomentirati poslije - > ispis rezultata bez okvira*/
+}
+/* ===========================FOOTER=======================================*/
+footer{
+	position: absolute;
+	clear: both;
+	background: url("../img/info.jpg") center center;
+	background-size: cover;
+	height: auto; /*automatski dodjeljiva visinu ovisno o sadržaju i njegovoj visini*/
+	width: 100% !important;
+	left: 0px;
+	bottom: 0px;
+}
+small{
+	text-align: center;
+	color: #ccc;
+	float: left;
+	margin-top: 5px; /*udaljenost texta od vrha footera*/
+	margin-bottom: 2px; /*udaljenost texta od dna*/
+	margin-left: 30%; /*margin left i right pomiču text od rubova footera*/
+	margin-right: 30%;
+}
+/*=====================NAVIGATION=====================================================*/
+a{
+	font-weight: 700;
+	font-size: 18px;
+	letter-spacing: 5px;
+}
+nav{
+	text-transform: uppercase;
+	position: relative; /* da bi navigacija isla preko contenta */
+	z-index: 1000; /* da bi navigacija isla preko contenta */
+	background: rgba(72, 72, 72, 0.4);
+}
+nav ul{
+	list-style: none;
+	padding-left: 0px; /* odmak od lijevog ruba */
+}
+nav ul li {
+	display: none;
+	width: 100% !important;
+	padding-bottom: 0px; /* da bude cijeli -li- clickable */
+	padding-top: 0px; /* da bude cijeli -li- clickable */
+	padding-left: 0px;
+	padding-right: 0px;
+	border-bottom: grey solid 1px;
+}
+nav ul li a {
+	color: #FFF;
+	text-decoration: none;
+	display: block;
+	padding-bottom: 50px; /* podešavanje visine klikabilnog podrucja*/
+	padding-top: 50px;    /* podešavanje visine klikabilnog podrucja*/
+}
+nav ul li:hover{
+	background-color: rgba(255, 0 , 0, 0.3);
+}
+.twistbtn {
+	background: url("../img/button.png") no-repeat center top;
+	z-index: 1000;
+    height: 100px;
+	width: 100px;
+	border: none;
+	/*position: absolute;*/ /*zbog ovog app nece raditi */
+	margin-left: 46.5%;
+	margin-top: 0%;
+}
+/*=======================================================================================*/
+.open{
+	background: url("../img/menubtn1.png") !important;
+	width: 24px;
+	height: 24px;
+}
+/*===========================RESPONSIVE==================================================*/
+/* files 320.css, 600.css, 1024.css, 1366.css */
+/*=======================================================================================*/
+
+section.press button{
+	height: 120px;
+	width: 120px;
+}
+
+/*===============================================LOKACIJA UDOVA===========================*/
+	#lijr{
+		background: url("../img/lr.png");
+		z-index:1;
+		position:absolute;
+		left: 39.5%;
+		top: 34%;
+	}
+	#desr{
+		background: url("../img/dr.png");
+		z-index:1;
+		position:absolute;
+		left: 48.5%;
+		top: 34%;
+		
+	}
+	#dn{
+		background: url("../img/dn.png");
+		z-index:1;
+		position:absolute;
+		left: 48%;
+		top: 51.5%;
+	}
+	#ln{
+		background: url("../img/ln.png");
+		z-index:1;
+		position:absolute;
+		left: 40%;
+		top: 51.5%;
+	}
+
+	#crvena{
+		left: 39.5%;
+		top: 34%;
+		position:absolute;
+	}
+
+	#zelena{
+		position:absolute;
+		left: 48.5%;
+		top: 34%;
+	}
+	#zuta{
+		position: absolute;
+		left: 40%;
+		top: 51.5%;
+	}
+
+	#plava{
+		position:absolute;
+		left: 48%;
+		top: 51.5%;
+	}
+}

@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.phonegap.helloworld" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.phonegap.twisterWheel" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Twister Wheel</name>
     <description>
-        Hybrid HTML5 CSS3 JS Android Twister Wheel Application
+        Hybrid Android HTML5 CSS3 JS Twister Wheel Application build with PhoneGap
     </description>
     <author email="nikolina.alajbeg@gmail.com">
         Nikolina Alajbeg
@@ -12,13 +12,113 @@
 	<preference name="AndroidPersistentFileLocation" value="Compatibility" />
 
     <preference name="permissions" value="none" />
+	<preference name="orientation" value="default" />
     <preference name="phonegap-version" value="3.7.0" />
-    <preference name="orientation" value="default" />
     <preference name="target-device" value="universal" />
     <preference name="fullscreen" value="true" />
     <preference name="android-minSdkVersion" value="14" />
-		
+	
+	<preference name="webviewbounce" value="true" />
+    <preference name="prerendered-icon" value="true" />
+    <preference name="stay-in-webview" value="false" />
+    <preference name="ios-statusbarstyle" value="black-opaque" />
+    <preference name="detect-data-types" value="true" />
+    <preference name="exit-on-suspend" value="false" />
+    <preference name="show-splash-screen-spinner" value="true" />
+    <preference name="auto-hide-splash-screen" value="true" />
+    <preference name="disable-cursor" value="false" />
+	
+	<gap:plugin name="org.apache.cordova.battery-status" />
+    <gap:plugin name="org.apache.cordova.camera" />
+    <gap:plugin name="org.apache.cordova.media-capture" />
+    <gap:plugin name="org.apache.cordova.console" />
+    <gap:plugin name="org.apache.cordova.contacts" />
+    <gap:plugin name="org.apache.cordova.device" />
+    <gap:plugin name="org.apache.cordova.device-motion" />
+    <gap:plugin name="org.apache.cordova.device-orientation" />
+    <gap:plugin name="org.apache.cordova.dialogs" />
+    <gap:plugin name="org.apache.cordova.file" />
+    <gap:plugin name="org.apache.cordova.file-transfer" />
+    <gap:plugin name="org.apache.cordova.geolocation" />
+    <gap:plugin name="org.apache.cordova.globalization" />
+    <gap:plugin name="org.apache.cordova.inappbrowser" />
+    <gap:plugin name="org.apache.cordova.media" />
+    <gap:plugin name="org.apache.cordova.network-information" />
+    <gap:plugin name="org.apache.cordova.splashscreen" />
+    <gap:plugin name="org.apache.cordova.vibration" />
+	<icon src="www/icon.png" />
+<!-- ===================== SPLASH SCREEN =========================-->		
 	<preference name="SplashScreen" value="screen"/>
-	<preference name="SplashScreenDelay" value="10000"/>
+	<preference name="SplashScreenDelay" value="5000"/>
+	<preference name="SplashShowOnlyFirstTime" value="false" />
+<!--===========ANDROID=============================================================================-->	
+	<gap:splash gap:platform="android" gap:qualifier="port-ldpi" src="www/res/screen/android/screen-ldpi-portrait.png" />
+    <gap:splash gap:platform="android" gap:qualifier="port-mdpi" src="www/res/screen/android/screen-mdpi-portrait.png" />
+    <gap:splash gap:platform="android" gap:qualifier="port-hdpi" src="www/res/screen/android/screen-hdpi-portrait.png" />
+    <gap:splash gap:platform="android" gap:qualifier="port-xhdpi" src="www/res/screen/android/screen-xhdpi-portrait.png" />
+    <gap:splash gap:platform="android" density="land-hdpi" src="www/res/screen/android/screen-hdpi-landscape.png" />
+    <gap:splash gap:platform="android" density="land-ldpi" src="www/res/screen/android/screen-ldpi-landscape.png" />
+    <gap:splash gap:platform="android" density="land-mdpi" src="www/res/screen/android/screen-mdpi-landscape.png" />
+    <gap:splash gap:platform="android" density="land-xhdpi" src="www/res/screen/android/screen-xhdpi-landscape.png" />
+
+<!--==========IOS===================================================================================-->
+    <gap:splash gap:platform="ios" height="480" src="www/res/screen/ios/screen-iphone-portrait.png" width="320" />
+    <gap:splash gap:platform="ios" height="960" src="www/res/screen/ios/screen-iphone-portrait-2x.png" width="640" />
+    <gap:splash gap:platform="ios" height="1136" src="www/res/screen/ios/screen-iphone-portrait-568h-2x.png" width="640" />
+    <gap:splash gap:platform="ios" height="1024" src="www/res/screen/ios/screen-ipad-portrait.png" width="768" />
+    <gap:splash gap:platform="ios" height="768" src="www/res/screen/ios/screen-ipad-landscape.png" width="1024" />
+
+    <gap:splash gap:platform="winphone" src="www/res/screen/windows-phone/screen-portrait.jpg" />
+	<gap:splash gap:platform="blackberry" src="www/res/screen/blackberry/screen-225.png" />
+	<!--========== BROWSER ===================-->
+	<platform name="browser">
+		<preference name="SplashScreen" value="/img/logo.png" /> <!-- defaults to "/img/logo.png" -->
+		<preference name="SplashScreenDelay" value="5000" /> <!-- defaults to "3000" -->
+		<preference name="SplashScreenBackgroundColor" value="#464646" /> <!-- defaults to "#464646" -->
+		<preference name="ShowSplashScreen" value="true" /> <!-- defaults to "true" -->
+		<preference name="SplashScreenWidth" value="170" /> <!-- defaults to "170" -->
+		<preference name="SplashScreenHeight" value="200" /> <!-- defaults to "200" -->
+	</platform>
+<!--=========== set icon location ===============================-->
+	<platform name="android">
+    <!--
+            ldpi    : 36x36 px
+            mdpi    : 48x48 px
+            hdpi    : 72x72 px
+            xhdpi   : 96x96 px
+            xxhdpi  : 144x144 px
+            xxxhdpi : 192x192 px
+        -->
+        <icon src="www/res/icon/android/icon-36-ldpi.png" density="ldpi" />
+		<icon src="www/res/icon/android/icon-48-mdpi.png" density="mdpi" />
+		<icon src="www/res/icon/android/icon-72-hdpi.png" density="hdpi" />
+		<icon src="www/res/icon/android/icon-96-xhdpi.png" density="xhdpi" />
+  </platform>
+	 
+	<platform name="ios">
+<!-- iOS 7.0+ -->
+<!-- iPhone / iPod Touch  -->
+    <!-- treba dodati <icon src="res/ios/icon/icon-60.png" width="60" height="60" /> -->
+    <!-- treba dodati <icon src="res/ios/icon/icon-60-2x.png" width="120" height="120" /> -->
+<!-- iPad -->
+    <!-- treba dodati <icon src="res/ios/icon/icon-76.png" width="76" height="76" /> -->
+    <!-- treba dodati <icon src="res/ios/icon/icon-76-2x.png" width="152" height="152" /> -->
+<!-- iOS 6.1 -->
+<!-- Spotlight Icon -->
+    <!-- treba dodati <icon src="res/ios/icon/icon-40.png" width="40" height="40" /> -->
+    <!-- treba dodati <icon src="res/ios/icon/icon-40-2x.png" width="80" height="80" /> -->
+<!-- iPhone / iPod Touch -->
+    <icon src="www/res/icon/ios/icon-57.png" width="57" height="57" />
+    <icon src="www/res/icon/ios/icon-57-2x.png" width="114" height="114" />
+<!-- iPad -->
+    <icon src="www/res/icon/ios/icon-72.png" width="72" height="72" />
+    <icon src="www/res/icon/ios/icon-72-2x.png" width="144" height="144" />
+<!-- iPhone Spotlight and Settings Icon -->
+    <!-- treba dodati <icon src="res/ios/icon/icon-small.png" width="29" height="29" /> -->
+    <!-- treba dodati <icon src="res/ios/icon/icon-small-2x.png" width="58" height="58" /> -->
+<!--iPad Spotlight and Settings Icon -->
+    <!-- treba dodati <icon src="res/ios/icon/icon-50.png" width="50" height="50" /> -->
+    <!-- treba dodati <icon src="res/ios/icon/icon-50-2x.png" width="100" height="100" /> -->
+  </platform>
   
 </widget>
