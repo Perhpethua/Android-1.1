@@ -2,13 +2,13 @@ var degrees = 0;
 var looper, poljeElemenata, privremena, temp, vari = 0;
 var elem1, elem2, elem3, elem4, lijruk, desruk, lijnog, desnog, boja, bc;
 var setspeed;
-//var rez = null;
+var rez = '';
 
-/*var bleep = new Audio(); //new Audio instance
+var bleep = new Audio(); //new Audio instance
 bleep.src = "audio/2.mp3";
-*/
 
-function ide(e1, e2, e3, e4, e5, e6, e7, e8, speed){
+
+function ide(e1, e2, e3, e4, e5, e6, e7, e8, speed, rez){
 	console.log("usli");
 	document.body.style.backgroundColor = "#484848";//changes color when spinning
 	elem1 = document.getElementById(e1);//zuta
@@ -20,14 +20,14 @@ function ide(e1, e2, e3, e4, e5, e6, e7, e8, speed){
 	lijnog = document.getElementById(e7);//lijeva noga
 	desnog = document.getElementById(e8);//desna noga
 	var botun = document.getElementById('botunt');
-//	rez = document.getElementById(rezultat); //DODANO 18.4
+	rez = document.getElementById('result'); //DODANO 18.4
 	setspeed = speed;
 	/*===============================sadded sound on button twist*/
 	
 	/*var mymedia = new Media("audio/2.mp3");
 	mymedia.play();*/
 
-	//bleep.play();
+	bleep.play();
 	/*-----------------------------*/
 	poljeElemenata = [elem1, elem2, elem3, elem4, desruk, lijruk, desnog, lijnog];
 	console.log(poljeElemenata);
@@ -187,9 +187,11 @@ function uvecajSmanji(){
 		
 function staPise(){
 	String = prikazi();
-	console.log(poljeElemenata);
-
-	//rez.value= radno_polje[randombr];//DODANO 18.4
+	console.log(radno_polje[randombr]);
+	//document.getElementById("myTextarea").value = radno_polje[randombr]; //prikazuje text u text area
+	var div = document.getElementById("textResult");
+    div.textContent = radno_polje[randombr];
+    var text = div.textContent;
 
 	if(String.indexOf("zeleno") > 0){//postavljanje boja u varijablu privremena
 		privremena = elem4;

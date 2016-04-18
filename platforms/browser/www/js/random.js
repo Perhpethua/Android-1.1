@@ -70,7 +70,7 @@ function prikazi(){
 	provjeriUdove();
 	return radno_polje[randombr];
 	
-/*return document.querySelector('.randomf').innerHTML = radno_polje[randombr]; 
+//return document.querySelector('.randomf').innerHTML = radno_polje[randombr]; 
 //querySelector - Get the first element in the document with named class -> '.randomf'*/
 }
 

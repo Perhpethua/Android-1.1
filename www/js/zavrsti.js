@@ -188,6 +188,10 @@ function uvecajSmanji(){
 function staPise(){
 	String = prikazi();
 	console.log(radno_polje[randombr]);
+	//document.getElementById("myTextarea").value = radno_polje[randombr]; //prikazuje text u text area
+	var div = document.getElementById("textResult");
+    div.textContent = radno_polje[randombr];
+    var text = div.textContent;
 
 	if(String.indexOf("zeleno") > 0){//postavljanje boja u varijablu privremena
 		privremena = elem4;
@@ -215,8 +219,6 @@ function staPise(){
 	}else if(String.indexOf("lijeva noga") > 0){
 		temp = lijnog;
 	}
-	return document.querySelector('.textrez').innerHTML = radno_polje[randombr]; 
-
 }
 /*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/		
 		

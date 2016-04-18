@@ -61,16 +61,24 @@ header{
 }
 /*=======================PRIKAZ REZULTATA=========================================*/
 #textResult{
-	margin-top: 400px;
+	/*margin-top: 400px;*/
 	margin-left: 0%;
 	margin-right: 0%;
 	text-align: center;
+	background-color: white;
+	font-weight: bold;
+	text-transform: uppercase;
+	height: auto;
+	border-radius: 15px;
+	width: auto;
+	margin-left: 45%;
+	margin-bottom: 2%;
 }
 #result{
 	border-radius: 9px;
 	width: 200px;
 	font-weight: bold;
-	/*border: none;*/ /* odkomentirati poslije - > ispis rezultata bez okvira*/
+	border: none; /* odkomentirati poslije - > ispis rezultata bez okvira*/
 }
 /* ===========================FOOTER=======================================*/
 footer{
