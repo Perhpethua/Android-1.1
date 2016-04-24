@@ -16,10 +16,18 @@
     <feature name="Media">
         <param name="android-package" value="org.apache.cordova.media.AudioHandler" />
     </feature>
-    <icon density="ldpi" src="www/res/icon/android/icon-36-ldpi.png" />
-    <icon density="mdpi" src="www/res/icon/android/icon-48-mdpi.png" />
-    <icon density="hdpi" src="www/res/icon/android/icon-72-hdpi.png" />
-    <icon density="xhdpi" src="www/res/icon/android/icon-96-xhdpi.png" />
+    <splash density="land-hdpi" src="res/screen/android/screen-hdpi-landscape.png" />
+    <splash density="land-ldpi" src="res/screen/android/screen-ldpi-landscape.png" />
+    <splash density="land-mdpi" src="res/screen/android/screen-mdpi-landscape.png" />
+    <splash density="land-xhdpi" src="res/screen/android/screen-xhdpi-landscape.png" />
+    <splash density="port-hdpi" src="res/screen/android/screen-hdpi-portrait.png" />
+    <splash density="port-ldpi" src="res/screen/android/screen-ldpi-portrait.png" />
+    <splash density="port-mdpi" src="res/screen/android/screen-mdpi-portrait.png" />
+    <splash density="port-xhdpi" src="res/screen/android/screen-xhdpi-portrait.png" />
+    <icon qualifier="ldpi" src="res/icon/android/icon-36-ldpi.png" />
+    <icon qualifier="mdpi" src="res/icon/android/icon-48-mdpi.png" />
+    <icon qualifier="hdpi" src="res/icon/android/icon-72-hdpi.png" />
+    <icon qualifier="xhdpi" src="res/icon/android/icon-96-xhdpi.png" />
     <name>Twister Wheel</name>
     <description>
         Hybrid Android HTML5 CSS3 JS Twister Wheel Application build with PhoneGap
@@ -62,23 +70,10 @@
     <gap:plugin name="org.apache.cordova.network-information" />
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <gap:plugin name="org.apache.cordova.vibration" />
-    <icon src="www/icon.png" />
+    <icon src="icon.png" />
     <preference name="SplashScreen" value="screen" />
-    <preference name="SplashScreenDelay" value="5000" />
+    <preference name="SplashScreenDelay" value="8000" />
     <preference name="SplashShowOnlyFirstTime" value="false" />
-    <gap:splash gap:platform="android" gap:qualifier="port-ldpi" src="www/res/screen/android/screen-ldpi-portrait.png" />
-    <gap:splash gap:platform="android" gap:qualifier="port-mdpi" src="www/res/screen/android/screen-mdpi-portrait.png" />
-    <gap:splash gap:platform="android" gap:qualifier="port-hdpi" src="www/res/screen/android/screen-hdpi-portrait.png" />
-    <gap:splash gap:platform="android" gap:qualifier="port-xhdpi" src="www/res/screen/android/screen-xhdpi-portrait.png" />
-    <gap:splash density="land-hdpi" gap:platform="android" src="www/res/screen/android/screen-hdpi-landscape.png" />
-    <gap:splash density="land-ldpi" gap:platform="android" src="www/res/screen/android/screen-ldpi-landscape.png" />
-    <gap:splash density="land-mdpi" gap:platform="android" src="www/res/screen/android/screen-mdpi-landscape.png" />
-    <gap:splash density="land-xhdpi" gap:platform="android" src="www/res/screen/android/screen-xhdpi-landscape.png" />
-    <gap:splash gap:platform="ios" height="480" src="www/res/screen/ios/screen-iphone-portrait.png" width="320" />
-    <gap:splash gap:platform="ios" height="960" src="www/res/screen/ios/screen-iphone-portrait-2x.png" width="640" />
-    <gap:splash gap:platform="ios" height="1136" src="www/res/screen/ios/screen-iphone-portrait-568h-2x.png" width="640" />
-    <gap:splash gap:platform="ios" height="1024" src="www/res/screen/ios/screen-ipad-portrait.png" width="768" />
-    <gap:splash gap:platform="ios" height="768" src="www/res/screen/ios/screen-ipad-landscape.png" width="1024" />
     <gap:splash gap:platform="winphone" src="www/res/screen/windows-phone/screen-portrait.jpg" />
     <gap:splash gap:platform="blackberry" src="www/res/screen/blackberry/screen-225.png" />
 </widget>

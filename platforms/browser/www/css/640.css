@@ -3,11 +3,12 @@
 	
 	.udovi{
 		width: 100% !important;
-		height: 
+		margin-top: 0px !important;
 	}
 	#textResult{
 		width: 100% !important;
-		margin-top: 400px !important;
+		margin-top: 140px !important;
+		margin-left: 0px !important;
 		text-align: center;
 	}
 	#headerlogo{
@@ -20,55 +21,55 @@
 		background: url("../img/lr.png");
 		z-index:1;
 		position:absolute;
-		left: 16.5% !important ;
-		top: 40% !important;
+		left: 15.5% !important ;
+		top: 32% !important;
 	}
 	#desr{
 		background: url("../img/dr.png");
 		z-index:1;
 		position:absolute;
 		left: 51% !important;
-		top: 40% !important;
+		top: 32% !important;
 	}
 	#dn{
 		background: url("../img/dn.png");
 		z-index:1;
 		position:absolute;
 		left: 51% !important;
-		top: 64% !important;
+		top: 57% !important;
 	}
 	#ln{
 		background: url("../img/ln.png");
 		z-index:1;
 		position:absolute;
-		left: 16.5% !important;
-		top: 64% !important;
+		left: 15.5% !important;
+		top: 57% !important;
 	}
 
 	#crvena{
-		left: 24% !important;
-		top: 45% !important;
+		left: 23% !important;
+		top: 37.5% !important;
 		position:absolute;
 		content: url("../img/crvena320.png");
 	}
 
 	#zelena{
 		position:absolute;
-		left: 52% !important;
-		top: 45% !important;
+		left: 51% !important;
+		top: 37.5% !important;
 		content: url("../img/zelena320.png");
 	}
 	#zuta{
 		position: absolute;
-		left: 24% !important;
-		top: 64% !important;
+		left: 23% !important;
+		top: 58% !important;
 		content: url("../img/zuta320.png");
 	}
 
 	#plava{
 		position:absolute;
-		left: 52% !important;
-		top: 64% !important;
+		left: 51% !important;
+		top: 58% !important;
 		content: url("../img/plava320.png");
 	}
 	.twistbtn {
@@ -77,8 +78,8 @@
 	    height: 100px;
 		width: 100px;
 		border: none;
-		left: 38% !important;
-		top: 55% !important;
+		margin-left: 36% !important;
+		margin-top: 35% !important;
 	}
 	footer{
 		display: none;

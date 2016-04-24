@@ -10,14 +10,14 @@
 		text-align: center;
 		margin-left: 40% !important;
 		margin-top: 0px !important;
-	}
+	
 	#headerlogo{
 		padding-top: 2px !important;
 		padding-right: 100px !important;
 		padding-left: 100px !important;
 	}
 	.udovi{ 
-		margin-top: 40%; /* move from top all elements*/
+		margin-top: 0% !important; /* move from top all elements*/
 	}
 	/*=======================PRIKAZ REZULTATA=========================================*/
 	#textResult{
@@ -56,7 +56,7 @@
 
 	#crvena{
 		left: 21% !important;
-		top: 28.5% !important;
+		top: 26% !important;
 		position:absolute;
 		content: url("../img/crvena320.png");
 	}
@@ -64,7 +64,7 @@
 	#zelena{
 		position:absolute;
 		left: 50% !important;
-		top: 28.5% !important;
+		top: 26% !important;
 		content: url("../img/zelena320.png");
 	}
 	#zuta{

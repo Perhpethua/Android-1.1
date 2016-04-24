@@ -26,20 +26,7 @@
     <gap:plugin name="org.apache.cordova.network-information" />
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <gap:plugin name="org.apache.cordova.vibration" />
-    <icon src="www/icon.png" />
-    <gap:splash gap:platform="android" gap:qualifier="port-ldpi" src="www/res/screen/android/screen-ldpi-portrait.png" />
-    <gap:splash gap:platform="android" gap:qualifier="port-mdpi" src="www/res/screen/android/screen-mdpi-portrait.png" />
-    <gap:splash gap:platform="android" gap:qualifier="port-hdpi" src="www/res/screen/android/screen-hdpi-portrait.png" />
-    <gap:splash gap:platform="android" gap:qualifier="port-xhdpi" src="www/res/screen/android/screen-xhdpi-portrait.png" />
-    <gap:splash density="land-hdpi" gap:platform="android" src="www/res/screen/android/screen-hdpi-landscape.png" />
-    <gap:splash density="land-ldpi" gap:platform="android" src="www/res/screen/android/screen-ldpi-landscape.png" />
-    <gap:splash density="land-mdpi" gap:platform="android" src="www/res/screen/android/screen-mdpi-landscape.png" />
-    <gap:splash density="land-xhdpi" gap:platform="android" src="www/res/screen/android/screen-xhdpi-landscape.png" />
-    <gap:splash gap:platform="ios" height="480" src="www/res/screen/ios/screen-iphone-portrait.png" width="320" />
-    <gap:splash gap:platform="ios" height="960" src="www/res/screen/ios/screen-iphone-portrait-2x.png" width="640" />
-    <gap:splash gap:platform="ios" height="1136" src="www/res/screen/ios/screen-iphone-portrait-568h-2x.png" width="640" />
-    <gap:splash gap:platform="ios" height="1024" src="www/res/screen/ios/screen-ipad-portrait.png" width="768" />
-    <gap:splash gap:platform="ios" height="768" src="www/res/screen/ios/screen-ipad-landscape.png" width="1024" />
+    <icon src="icon.png" />
     <gap:splash gap:platform="winphone" src="www/res/screen/windows-phone/screen-portrait.jpg" />
     <gap:splash gap:platform="blackberry" src="www/res/screen/blackberry/screen-225.png" />
     <preference name="AndroidPersistentFileLocation" value="Compatibility" />
@@ -58,9 +45,9 @@
     <preference name="show-splash-screen-spinner" value="true" />
     <preference name="auto-hide-splash-screen" value="true" />
     <preference name="disable-cursor" value="false" />
-    <preference name="SplashScreen" value="/img/logo.png" />
-    <preference name="SplashShowOnlyFirstTime" value="false" />
+    <preference name="SplashScreen" value="platforms/browser/img/logo.png" />
     <preference name="SplashScreenDelay" value="5000" />
+    <preference name="SplashShowOnlyFirstTime" value="false" />
     <preference name="SplashScreenBackgroundColor" value="#464646" />
     <preference name="ShowSplashScreen" value="true" />
     <preference name="SplashScreenWidth" value="170" />

@@ -53,8 +53,8 @@ header{
 
 /* ===============================SLIKE====================================*/
 .udovi{ 
-	margin-top: 300px; /* move from top*/
-	margin-bottom: 15%; /*move from bottom*/
+	margin-top: 0px; /* move from top*/
+	margin-bottom: 0px; /*move from bottom*/
 }
 #crvena, #zelena, #plava, #zuta, #lijr, #desr, #ln, #dn, #botunt{
 	z-index: -1000 !important; /* da elementi budu ispod navigacije kad se pojavi */
