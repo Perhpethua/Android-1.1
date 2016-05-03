@@ -79,7 +79,7 @@ function provjeriUdove(){
 	for(var i = 0; i < 20 ; i++){
 		radno_polje[i] = opcije[i];
 	}
-	console.log(radno_polje);
+	//console.log(radno_polje);
 	radno_polje.splice((radno_polje.indexOf(lr)), 1);
 	radno_polje.splice((radno_polje.indexOf(dr)), 1);
 	if(ln != undefined){
@@ -88,16 +88,16 @@ function provjeriUdove(){
 	if(dn != undefined){
 	radno_polje.splice((radno_polje.indexOf(dn)), 1);
 	}
-	console.log(radno_polje);
+	//console.log(radno_polje);
 
 	randombr = randomf(radno_polje.length - 1);
 	while(radno_polje[randombr] == lr || radno_polje[randombr] == dr || radno_polje[randombr] == dn || radno_polje[randombr] == ln)
 	{
 		randombr = randomf(radno_polje.length - 1);
 	}
-	console.log(radno_polje[randombr]);
+	//console.log(radno_polje[randombr]);
 	globalUdovi();
-	console.log(randombr);
+	//console.log(randombr);
 }
 
 function globalUdovi(){

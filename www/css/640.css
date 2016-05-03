@@ -1,20 +1,38 @@
 @media screen and (max-device-width: 640px){
-	
-	
+	.logo{
+		margin-top: 150px !important;
+		margin-left: 10px !important;
+	}
+	.logow{
+		margin-top: 0px !important;
+		margin-left: 140px !important;
+		padding-top: 10px;
+	}
+
+	#indextextw{
+		margin-right: 0px !important;
+		margin-left: 0px;
+		padding-left: 0px;
+		margin-top: 50px;
+		font-weight: bolder;
+		letter-spacing: 5px;
+		padding-left: 10px;
+	}
 	.udovi{
 		width: 100% !important;
 		margin-top: 0px !important;
 	}
 	#textResult{
 		width: 100% !important;
-		margin-top: 140px !important;
+		margin-top: 200px !important;
 		margin-left: 0px !important;
 		text-align: center;
 	}
 	#headerlogo{
-		padding-left: 115px !important;
+		padding-left: 0px !important;
 		padding-right: 125px !important;
-		padding-top: 15px !important;
+		padding-top: 0px !important;
+		padding-bottom: 10px;
 	}
 /*=========================================================UDOVI======================================================================*/
 	#lijr{
@@ -79,30 +97,37 @@
 		width: 100px;
 		border: none;
 		margin-left: 36% !important;
-		margin-top: 35% !important;
+		margin-top: 150px !important;
+	}
+/*=========================================================NAVIGACIJA=================================================================*/
+	#a1{
+		padding-left: 95px;
+		margin-top: 0px !important;
+	}
+	#a2{
+		padding-left: 65px;
+		height: 119px;
+		margin-top: 39px;
+	}
+	#a3{
+		padding-left: 100px;
+		height: 120px;
+		margin-top: 35px;
 	}
 	footer{
 		display: none;
 	}
-	nav ul li{
-		padding-bottom: 65px !important;
-		padding-top: 65px !important;
-
-	}
 }
-/*=========================================================NAVIGACIJA=================================================================*/
+
 
 @media screen and (min-device-width: 320px) and (max-device-width: 640px){
 
-	nav ul li{
+	nav {
 		padding-bottom: 35px;
 		padding-top: 35px;
 
 	}
-	nav ul li a:hover{
-		background-color: transparent;
-	}
-	nav ul li a {
+	nav a{
 		color: #FFF;
 		text-decoration: none;
 		display: block;
@@ -111,6 +136,9 @@
 		letter-spacing: 2px !important;
 		font-size: 16px;
 
+	}
+	nav a:hover{
+		background-color: transparent;
 	}
 }	
 	

@@ -23,6 +23,10 @@
                         {
                             "xml": "<feature name=\"Media\"><param name=\"android-package\" value=\"org.apache.cordova.media.AudioHandler\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Notification\"><param name=\"android-package\" value=\"org.apache.cordova.dialogs.Notification\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -63,6 +67,9 @@
         },
         "cordova-plugin-media": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "com.phonegap.twisterWheel"
         }
     },
     "dependent_plugins": {},
@@ -244,6 +251,20 @@
             "id": "cordova-plugin-media.Media",
             "clobbers": [
                 "window.Media"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-dialogs/www/notification.js",
+            "id": "cordova-plugin-dialogs.notification",
+            "merges": [
+                "navigator.notification"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-dialogs/www/android/notification.js",
+            "id": "cordova-plugin-dialogs.notification_android",
+            "merges": [
+                "navigator.notification"
             ]
         }
     ]

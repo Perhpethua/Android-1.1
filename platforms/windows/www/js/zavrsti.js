@@ -4,12 +4,14 @@ var elem1, elem2, elem3, elem4, lijruk, desruk, lijnog, desnog, boja, bc;
 var setspeed;
 var rez = '';
 
-var bleep = new Audio(); //new Audio instance
-bleep.src = "audio/2.mp3";
+var mymedia = null;
 
+/*var bleep = new Audio(); //new Audio instance
+bleep.src = "audio/2.mp3";
+*/
 
 function ide(e1, e2, e3, e4, e5, e6, e7, e8, speed, rez){
-	console.log("usli");
+	//console.log("usli");
 	document.body.style.backgroundColor = "#484848";//changes color when spinning
 	elem1 = document.getElementById(e1);//zuta
 	elem2 = document.getElementById(e2);//crvena
@@ -22,16 +24,23 @@ function ide(e1, e2, e3, e4, e5, e6, e7, e8, speed, rez){
 	var botun = document.getElementById('botunt');
 	rez = document.getElementById('result'); //DODANO 18.4
 	setspeed = speed;
-	/*===============================sadded sound on button twist*/
-	
-	/*var mymedia = new Media("audio/2.mp3");
-	mymedia.play();*/
+/*===========media music==========================================*/	
+	//isReady();
 
-	bleep.play();
-	/*-----------------------------*/
 	poljeElemenata = [elem1, elem2, elem3, elem4, desruk, lijruk, desnog, lijnog];
-	console.log(poljeElemenata);
+	//console.log(poljeElemenata);
 	rotateAnimation(setspeed);
+}
+/*function dajmusic(musicid){
+	audioElement = document.getElementById(musicid);
+	url = audioElement.getAttribute('src');
+	mymedia = new Media('platforms/android/assets/www/' + url,
+        // success callback
+         function () { console.log("playAudio():Audio Success"); },
+        // error callback
+         function (err) { console.log("playAudio():Audio Error: " + err); }
+);
+    mymedia.play();
 }
 /*======================================added sound effect*/
 
@@ -149,7 +158,7 @@ function rotateAnimation(setspeed){
 		clearTimeout(looper);
 		degrees = 0;
 		staPise();
-		console.log(poljeElemenata);
+		//console.log(poljeElemenata);
 		uvecajSmanji();
 	}
 }
@@ -164,9 +173,9 @@ function rotateAnimation(setspeed){
 function uvecajSmanji(){
 	staPise();
 	var i = 0;
-	console.log(poljeElemenata);
+	//console.log(poljeElemenata);
 	for(i; i < poljeElemenata.length ; i++){
-		console.log(poljeElemenata[i]);
+		//console.log(poljeElemenata[i]);
 		if((poljeElemenata[i] != temp) && (poljeElemenata[i] != privremena)){
 			if(navigator.userAgent.match("Chrome")){
 				poljeElemenata[i].style.WebkitTransform = "scale("+vari+")"; //Chrome
@@ -187,7 +196,7 @@ function uvecajSmanji(){
 		
 function staPise(){
 	String = prikazi();
-	console.log(radno_polje[randombr]);
+	//console.log(radno_polje[randombr]);
 	//document.getElementById("myTextarea").value = radno_polje[randombr]; //prikazuje text u text area
 	var div = document.getElementById("textResult");
     div.textContent = radno_polje[randombr];
@@ -195,19 +204,19 @@ function staPise(){
 
 	if(String.indexOf("zeleno") > 0){//postavljanje boja u varijablu privremena
 		privremena = elem4;
-		document.body.style.backgroundImage = "url('img/greenc.jpg')";//green
+		document.getElementById('bodyw').style.backgroundImage = "url('img/greenc.jpg')";//green
 	}else if(String.indexOf("zuto") > 0){
 		privremena = elem1;
-		document.body.style.backgroundImage = "url('img/yellowc.jpg')";//yellow
+		document.getElementById('bodyw').style.backgroundImage = "url('img/yellowc.jpg')";//yellow
 	}else if(String.indexOf("crveno") > 0){
 		privremena = elem2; 
-		document.body.style.backgroundImage = "url('img/redc.jpg')";//red
+		document.getElementById('bodyw').style.backgroundImage = "url('img/redc.jpg')";//red
 	}else if(String.indexOf("plavo") > 0){
 		privremena = elem3;
-		document.body.style.backgroundImage = "url('img/bluec.jpg')";//blue
+		document.getElementById('bodyw').style.backgroundImage = "url('img/bluec.jpg')";//blue
 	}else if(String.indexOf("zrak") > 0){
 		privremena = 0;
-		document.body.style.backgroundImage = "url('img/whitec.jpg')"; //white
+		document.getElementById('bodyw').style.backgroundImage = "url('img/whitec.jpg')"; //white
 	}
   
 	if(String.indexOf("desna ruka") > 0){// postavljanje nogu i ruku u temp varijablu

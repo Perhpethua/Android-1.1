@@ -1,0 +1,10 @@
+@media screen and (max-device-width: 640px){
+	.logo{
+		margin-top: 150px !important;
+		margin-left: 10px !important;
+	}
+	#body {
+		background: url("../img/index.png") !important;
+		padding: 10px;
+	}
+}

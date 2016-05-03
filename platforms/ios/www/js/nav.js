@@ -1,6 +1,6 @@
 $('.navbtn').click(function(){
 	$(this).toggleClass('open');/*menu btn becomes purple*/
-	$('nav ul li').slideToggle(400);
+	$('nav ul li').slideToggle(500);
 
 });
 

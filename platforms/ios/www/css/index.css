@@ -1,0 +1,85 @@
+
+#sidebar{
+	background: url("../img/obrnuto.png");
+	background-size: cover;
+	padding: 0px;
+
+	overflow:auto; //added
+	-webkit-overflow-scrolling:touch; //added
+	
+}
+#body {
+	background: url("../img/info.jpg");
+	background-size: cover;
+	padding:10px;
+}
+header{
+	
+	z-index: 1000;
+}
+.ilogo{
+	margin-top: 150px;
+	margin-left: 35%;
+}
+#indextext{
+	margin-left: 0px;
+	padding-left: 0px;
+	margin-top: 50px;
+	font-weight: bolder;
+	letter-spacing: 5px;
+}
+footer{
+	position: absolute;
+	clear: both;
+	height: 50px; /*auto - automatski dodjeljiva visinu ovisno o sadržaju i njegovoj visini*/
+	width: 100% !important;
+	left: 0px;
+	bottom: 0px; 
+	margin-bottom:0px;/*za 480height*/
+	padding-bottom: 10px; /*dodati za 480px height*/
+	background-color: #262E2E;
+	background: url("../img/index.png");
+}
+small{
+	text-align: center;
+	color: #ccc;
+	float: left;
+	margin-top: 5px; /*udaljenost texta od vrha footera*/
+	margin-bottom: 2px; /*udaljenost texta od dna*/
+	margin-left: 30%; /*margin left i right pomiču text od rubova footera*/
+	margin-right: 30%;
+}
+
+a{
+	font-weight: 700;
+	font-size: 18px;
+	letter-spacing: 5px;
+	list-style: none;
+}
+nav{
+	text-transform: uppercase;
+	position: relative; /* da bi navigacija isla preko contenta */
+	z-index: 1000; /* da bi navigacija isla preko contenta */
+	background: rgba(0, 0, 0, 0.7);
+	margin-top: 160px;
+}
+nav a{
+	list-style: none;
+	padding-left: 0px; /* odmak od lijevog ruba */
+	margin-left: 15px;
+	width: 100% !important;
+	padding-bottom: 0px; /* da bude cijeli -li- clickable */
+	padding-top: 0px; /* da bude cijeli -li- clickable */
+	padding-left: 0px;
+	padding-right: 0px;
+	border-bottom: grey solid 1px;
+	color: #FFF;
+	text-decoration: none;
+	display: block;
+	padding-bottom: 69px; /* podešavanje visine klikabilnog podrucja*/
+	padding-top: 69px;    /* podešavanje visine klikabilnog podrucja*/
+}
+
+nav a:hover{
+	background-color: rgba(255, 0 , 0, 0.5);
+}

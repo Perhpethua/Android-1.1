@@ -15,6 +15,9 @@
         },
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "Twister Wheel"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "Twister Wheel"
         }
     },
     "dependent_plugins": {

@@ -15,6 +15,9 @@
         },
         "cordova-plugin-media": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "com.phonegap.twisterWheel"
         }
     },
     "dependent_plugins": {
