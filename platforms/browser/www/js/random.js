@@ -54,11 +54,11 @@ var lr = opcije[17], //početne vrijednosti gdje je lijeva
 	ln, dn;
 var randombr;
 
-function twist(){//poziva je button
-	/* POZIVANJE ANIMACIJE */
+/*function twist(){//poziva je button
+	// POZIVANJE ANIMACIJE 
 	prikazi();
 }
-
+*/
 function randomf(max){
 	return Math.floor(Math.random() * max);
 }
@@ -66,7 +66,7 @@ function randomf(max){
 //console.log(Math.floor(Math.random()*(10-1)+1));+
 
 
-function prikazi(){
+function twist(){ //poziva je button
 	provjeriUdove();
 	return radno_polje[randombr];
 	

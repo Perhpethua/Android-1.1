@@ -8,7 +8,7 @@ var SlidingView = function( sidebarId, bodyId ) {
 	this.bodyOffset = 0;
 	
 	this.sidebarWidth = 250;
-	
+
 	this.sidebar = $("#"+sidebarId);
 	this.body = $("#"+bodyId);
 	

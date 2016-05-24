@@ -1,64 +1,64 @@
 var opcije = [
-			'0 desna ruka zeleno',
-			'1 lijeva ruka zeleno',
-			'2 desna noga zeleno', 
-			'3 lijeva noga zeleno',
+			'desna ruka zeleno',
+			'lijeva ruka zeleno',
+			'desna noga zeleno', 
+			'lijeva noga zeleno',
 
-			'4 desna ruka crveno',
-			'5 lijeva ruka crveno',
-			'6 desna noga crveno', 
-			'7 lijeva noga crveno',
+			'desna ruka crveno',
+			'lijeva ruka crveno',
+			'desna noga crveno', 
+			'lijeva noga crveno',
 
-			'8 desna ruka zuto',
-			'9 lijeva ruka zuto',
-			'10 desna noga zuto', 
-			'11 lijeva noga zuto',
+			'desna ruka zuto',
+			'lijeva ruka zuto',
+			'desna noga zuto', 
+			'lijeva noga zuto',
 
-			'12 desna ruka plavo',
-			'13 lijeva ruka plavo',
-			'14 desna noga plavo', 
-			'15 lijeva noga plavo',
+			'desna ruka plavo',
+			'lijeva ruka plavo',
+			'desna noga plavo', 
+			'lijeva noga plavo',
 
-			'16 desna ruka zrak',
-			'17 lijeva ruka zrak',
-			'18 desna noga zrak',
-			'19 lijeva noga zrak'];
+			'desna ruka zrak',
+			'lijeva ruka zrak',
+			'desna noga zrak',
+			'lijeva noga zrak'];
 var radno_polje = [
-			'0 desna ruka zeleno',
-			'1 lijeva ruka zeleno',
-			'2 desna noga zeleno', 
-			'3 lijeva noga zeleno',
+			'desna ruka zeleno',
+			'lijeva ruka zeleno',
+			'desna noga zeleno', 
+			'lijeva noga zeleno',
 
-			'4 desna ruka crveno',
-			'5 lijeva ruka crveno',
-			'6 desna noga crveno', 
-			'7 lijeva noga crveno',
+			'desna ruka crveno',
+			'lijeva ruka crveno',
+			'desna noga crveno', 
+			'lijeva noga crveno',
 
-			'8 desna ruka zuto',
-			'9 lijeva ruka zuto',
-			'10 desna noga zuto', 
-			'11 lijeva noga zuto',
+			'desna ruka zuto',
+			'lijeva ruka zuto',
+			'desna noga zuto', 
+			'lijeva noga zuto',
 
-			'12 desna ruka plavo',
-			'13 lijeva ruka plavo',
-			'14 desna noga plavo', 
-			'15 lijeva noga plavo',
+			'desna ruka plavo',
+			'lijeva ruka plavo',
+			'desna noga plavo', 
+			'lijeva noga plavo',
 
-			'16 desna ruka zrak',
-			'17 lijeva ruka zrak',
-			'18 desna noga zrak',
-			'19 lijeva noga zrak'];
+			'desna ruka zrak',
+			'lijeva ruka zrak',
+			'desna noga zrak',
+			'lijeva noga zrak'];
 			
 var lr = opcije[17], //početne vrijednosti gdje je lijeva
 	dr = opcije[16], // i desna ruka u zraku
 	ln, dn;
 var randombr;
 
-function twist(){//poziva je button
-	/* POZIVANJE ANIMACIJE */
+/*function twist(){//poziva je button
+	// POZIVANJE ANIMACIJE 
 	prikazi();
 }
-
+*/
 function randomf(max){
 	return Math.floor(Math.random() * max);
 }
@@ -66,7 +66,7 @@ function randomf(max){
 //console.log(Math.floor(Math.random()*(10-1)+1));+
 
 
-function prikazi(){
+function twist(){ //poziva je button
 	provjeriUdove();
 	return radno_polje[randombr];
 	

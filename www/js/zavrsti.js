@@ -1,77 +1,41 @@
 var degrees = 0;
-var looper, poljeElemenata, privremena, temp, vari = 0;
+var looper, privremena, temp, vari = 0;
 var elem1, elem2, elem3, elem4, lijruk, desruk, lijnog, desnog, boja, bc;
-var setspeed;
+var poljeElemenata;
 var rez = '';
 
 var mymedia = null;
 
-/*var bleep = new Audio(); //new Audio instance
-bleep.src = "audio/2.mp3";
-*/
-
-function ide(e1, e2, e3, e4, e5, e6, e7, e8, speed, rez){
+function ide(){
 	//console.log("usli");
 	document.body.style.backgroundColor = "#484848";//changes color when spinning
-	elem1 = document.getElementById(e1);//zuta
-	elem2 = document.getElementById(e2);//crvena
-	elem3 = document.getElementById(e3);//plava
-	elem4 = document.getElementById(e4);//zelena
-	lijruk = document.getElementById(e5);//lijeva ruka
-	desruk = document.getElementById(e6);//desna ruka
-	lijnog = document.getElementById(e7);//lijeva noga
-	desnog = document.getElementById(e8);//desna noga
-	var botun = document.getElementById('botunt');
-	rez = document.getElementById('result'); //DODANO 18.4
-	setspeed = speed;
-/*===========media music==========================================*/	
-	//isReady();
+	elem1 = document.getElementById("zuta");//zuta
+	elem2 = document.getElementById("crvena");//crvena
+	elem3 = document.getElementById("plava");//plava
+	elem4 = document.getElementById("zelena");//zelena
+	lijruk = document.getElementById("lijr");//lijeva ruka
+	desruk = document.getElementById("desr");//desna ruka
+	lijnog = document.getElementById("ln");//lijeva noga
+	desnog = document.getElementById("dn");//desna noga
+	botun = document.getElementById("botunt");
+	rez = document.getElementById("result"); 
 
+	var setspeed = 2; 
 	poljeElemenata = [elem1, elem2, elem3, elem4, desruk, lijruk, desnog, lijnog];
 	//console.log(poljeElemenata);
+	sviraj();
 	rotateAnimation(setspeed);
 }
-/*function dajmusic(musicid){
-	audioElement = document.getElementById(musicid);
-	url = audioElement.getAttribute('src');
-	mymedia = new Media('platforms/android/assets/www/' + url,
-        // success callback
-         function () { console.log("playAudio():Audio Success"); },
-        // error callback
-         function (err) { console.log("playAudio():Audio Error: " + err); }
-);
-    mymedia.play();
-}
-/*======================================added sound effect*/
-
-/*function playAudio(){
-
-	var mymedia = new Media("audio/2.mp3");
-	mymedia.play();
-
-	var song = new Audio(); //new Audio instance
-	song.src = "audio/2.mp3";
-	song.play();
-
-	/*if(navigator.userAgent.match(/Android/i)){
-		var song = new Media("audio/2.mp3");
-		song.play();
-		//stop after 3 sec
-		stopAudio();
-	}else{
+/*=========== MEDIA AND AUDIO MUSC - MOBILE AND PC ==========================================*/	
+function sviraj(){
+	if(navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i)){ //MOBILE
+		isReady(); //media.js
+	}else{ //PC
 		var song = new Audio(); //new Audio instance
 		song.src = "audio/2.mp3";
 		song.play();
 	}
-	//poziv function stopAudio
-}*/
-
-/*function stopAudio(){
-	if (song) {
-		setTimeout(function(){
-			song.stop();}, 3000);
-		}
-	};*/
+}
 /*===========================ROTIRANJE ELEMENATA===========================*/
 function rotateAnimation(setspeed){
 	
@@ -133,7 +97,6 @@ function rotateAnimation(setspeed){
 				poljeElemenata[i].style.webkitTransformOrigin = "0% 0%";
 			}
 		}
-
 	}else{
 		var i = 0;
 		for( i; i < poljeElemenata.length; i++){
@@ -150,18 +113,20 @@ function rotateAnimation(setspeed){
 			}
 		}
 	}
-			
+	
+		
 	looper = setTimeout('rotateAnimation('+setspeed+')',setspeed);
 	degrees++;
 
 	if(degrees == 361){
 		clearTimeout(looper);
 		degrees = 0;
-		staPise();
+		//staPise();
 		//console.log(poljeElemenata);
 		uvecajSmanji();
 	}
 }
+
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 		//prikazi();
 		//funkc uvecaj/smanji
@@ -195,37 +160,37 @@ function uvecajSmanji(){
 //i postavlja rezultat u privremene varijable
 		
 function staPise(){
-	String = prikazi();
+	String = twist();
 	//console.log(radno_polje[randombr]);
 	//document.getElementById("myTextarea").value = radno_polje[randombr]; //prikazuje text u text area
 	var div = document.getElementById("textResult");
     div.textContent = radno_polje[randombr];
     var text = div.textContent;
 
-	if(String.indexOf("zeleno") > 0){//postavljanje boja u varijablu privremena
+	if(String.indexOf("zeleno") > -1){//postavljanje boja u varijablu privremena
 		privremena = elem4;
 		document.getElementById('bodyw').style.backgroundImage = "url('img/greenc.jpg')";//green
-	}else if(String.indexOf("zuto") > 0){
+	}else if(String.indexOf("zuto") > -1){
 		privremena = elem1;
 		document.getElementById('bodyw').style.backgroundImage = "url('img/yellowc.jpg')";//yellow
-	}else if(String.indexOf("crveno") > 0){
+	}else if(String.indexOf("crveno") > -1){
 		privremena = elem2; 
 		document.getElementById('bodyw').style.backgroundImage = "url('img/redc.jpg')";//red
-	}else if(String.indexOf("plavo") > 0){
+	}else if(String.indexOf("plavo") > -1){
 		privremena = elem3;
 		document.getElementById('bodyw').style.backgroundImage = "url('img/bluec.jpg')";//blue
-	}else if(String.indexOf("zrak") > 0){
+	}else if(String.indexOf("zrak") > -1){
 		privremena = 0;
 		document.getElementById('bodyw').style.backgroundImage = "url('img/whitec.jpg')"; //white
 	}
   
-	if(String.indexOf("desna ruka") > 0){// postavljanje nogu i ruku u temp varijablu
+	if(String.indexOf("desna ruka") > -1){// postavljanje nogu i ruku u temp varijablu
 		temp = desruk;
-	}else if(String.indexOf("lijeva ruka") > 0){
+	}else if(String.indexOf("lijeva ruka") > -1){
 		temp = lijruk;
-	}else if(String.indexOf("desna noga") > 0){
+	}else if(String.indexOf("desna noga") > -1){
 		temp = desnog;
-	}else if(String.indexOf("lijeva noga") > 0){
+	}else if(String.indexOf("lijeva noga") > -1){
 		temp = lijnog;
 	}
 }

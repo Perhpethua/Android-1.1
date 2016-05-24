@@ -22,37 +22,30 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="mobile-web-app-capable" content="yes">
         <meta name="format-detection" content="telephone=no" />
         <meta name="msapplication-tap-highlight" content="no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1.0, minimum-scale=1.0, width=device-width, height=device-height, target-densitydpi=device-dpi" />
 
         <link rel="stylesheet" type="text/css" href="css/wheel.css" />
         <link rel="stylesheet" type="text/css" href="css/320.css" />
         <link rel="stylesheet" type="text/css" href="css/480.css" />
         <link rel="stylesheet" type="text/css" href="css/640.css" />
-
+        <link rel="stylesheet" type="text/css" href="css/slidingview.css" />
 		
         <title>Twister</title>
 		
 		<!--my scripts-->
 		<script type="text/javascript" src="js/random.js"></script>
 		<script type="text/javascript" src="js/zavrsti.js"></script>
-		<script type="text/javascript" src="js/index.js"></script>
-		<script type="text/javascript" src="js/jquery-1.12.3.js"></script>
+		<script type="text/javascript" src="js/automaticSpin.js"></script>
+        
 
-		<link rel="stylesheet" type="text/css" href="css/slidingview.css" />
- 
+		<script type="text/javascript" src="js/jquery-1.12.3.js"></script>
 		<script src="js/jquery-1.7.1.js"></script>
         <script src="js/jquery.animate-enhanced.js"></script>
-
-        
         <script src="js/slidingview.js"></script>
-        <script type="text/javascript" src="js/media.js"></script>
-
+        
         <script>
             $(document).ready( function() {
 
@@ -61,6 +54,7 @@
             } );
         </script>
 
+        <script type="text/javascript" src="js/media.js"></script>
     </head>
 
     <body>
@@ -68,50 +62,50 @@
     	<div class="slidingview_wrapper">
             <div id="sidebar">
                 <nav>
-					<a id="a1" href="index.html"><img id="list1" src="img/home.png"/><br> Home</a>
-					<a id="a2" href="wheel.html"><img id="list2" src="img/again.png"/><br> New Round</a>
-					<a id="a3" href="info.html"><img id="list3" src="img/info.png"/><br> Info</a>
+					<a id="a1" href="index.html"><img id="list1" src="img/home.png"/><br><p id="sidet1"> Home</p></a>
+					<a id="a2" href="wheel.html"><img id="list2" src="img/again.png"/><br><p id="sidet2"> New Round</p></a>
+					<a id="a3" href="info.html"><img id="list3" src="img/info.png"/><br><p id="sidet3"> Info</p></a>
 				</nav>
             </div>
 
             <div id="bodyw">
-            <header id="headerid">
-	            <small id="indextextw">SLIDE</small>
-	               
-	                    <div class="logow">
-	                        <img id="headerlogo" src="icon.png"/>
-	                    </div>
-	        </header>
+                <header id="headerid">
+    	            <small id="indextextw">SLIDE</small>
+    	            <div class="logow">
+    	               <img id="headerlogo" src="icon.png"/>
+                       <button id="autospin" onclick="automaticSpin()"><small id="autospinbtn">Auto Spin</small></button>
+    	            </div>
+                    
+    	        </header>
+
 	            <div id="main-wrapper">
-			            <div class="udovi">
-							<img id="zuta" src="img/zuta.png" alt="zuta">
-							<img id="crvena" src="img/crvena.png" alt="crvena">
-							<img id="plava" src="img/plava.png" alt="plava">
-							<img id="zelena" src="img/zelena.png" alt="zelena">
+			        <div class="udovi">
+				       <img id="zuta" src="img/zuta.png" alt="zuta">
+				       <img id="crvena" src="img/crvena.png" alt="crvena">
+				       <img id="plava" src="img/plava.png" alt="plava">
+				       <img id="zelena" src="img/zelena.png" alt="zelena">
 								
-							<img id="lijr" src="img/lr.png" alt="lijevaRuka">
-							<img id="desr" src="img/dr.png" alt="desnaRuka">
-							<img id="ln" src="img/ln.png" alt="lijevaNoga">
-							<img id="dn" src="img/dn.png" alt="desnaNoga">	
+				       <img id="lijr" src="img/lr.png" alt="lijevaRuka">
+				       <img id="desr" src="img/dr.png" alt="desnaRuka">
+					   <img id="ln" src="img/ln.png" alt="lijevaNoga">
+				       <img id="dn" src="img/dn.png" alt="desnaNoga">	
 							
-							<button id="botunt" class="twistbtn" onclick="ide('zuta','crvena','plava','zelena','lijr','desr' ,'ln', 'dn', 2, 'result')"></button>
-							<div id="textResult">
-								<input type="text" id="result" class="textrez" size="20">
-							</div>
-						</div>	
-
-					<script type="text/javascript">
-						app.initialize();
-					</script>
-				
-					<script type="text/javascript" src="js/nav.js"></script>
-
+				       <button id="botunt" class="twistbtn" onclick="ide()"></button>
+                            
+				       <div id="textResult">
+				       	<input type="text" id="result" class="textrez" size="20">
+                        <div id="counter"></div>
+				       </div>
+			        </div>
 				</div>
                 <footer>
                     <small>Hybrid HTML5 CSS3 JavaScript Android Application Twister Wheel</small>
                 </footer>
             </div>
         </div>
+        <script type="text/javascript" src="js/count.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
     </body>
 	
 </html>

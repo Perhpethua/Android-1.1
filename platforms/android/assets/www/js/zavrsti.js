@@ -25,12 +25,22 @@ function ide(e1, e2, e3, e4, e5, e6, e7, e8, speed, rez){
 	rez = document.getElementById('result'); //DODANO 18.4
 	setspeed = speed;
 /*===========media music==========================================*/	
+
 	//isReady();
+	if(navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i))
+	{
+		isReady();
+	}else{
+		var song = new Audio(); //new Audio instance
+		song.src = "audio/2.mp3";
+		song.play();
+	}
 
 	poljeElemenata = [elem1, elem2, elem3, elem4, desruk, lijruk, desnog, lijnog];
 	//console.log(poljeElemenata);
 	rotateAnimation(setspeed);
 }
+
 /*function dajmusic(musicid){
 	audioElement = document.getElementById(musicid);
 	url = audioElement.getAttribute('src');
@@ -46,25 +56,15 @@ function ide(e1, e2, e3, e4, e5, e6, e7, e8, speed, rez){
 
 /*function playAudio(){
 
-	var mymedia = new Media("audio/2.mp3");
+	var mymedia = new Media("/android_asset/www/audio/2.mp3");
 	mymedia.play();
 
 	var song = new Audio(); //new Audio instance
 	song.src = "audio/2.mp3";
-	song.play();
+	song.play();*/
 
-	/*if(navigator.userAgent.match(/Android/i)){
-		var song = new Media("audio/2.mp3");
-		song.play();
-		//stop after 3 sec
-		stopAudio();
-	}else{
-		var song = new Audio(); //new Audio instance
-		song.src = "audio/2.mp3";
-		song.play();
-	}
+	
 	//poziv function stopAudio
-}*/
 
 /*function stopAudio(){
 	if (song) {
@@ -195,37 +195,37 @@ function uvecajSmanji(){
 //i postavlja rezultat u privremene varijable
 		
 function staPise(){
-	String = prikazi();
+	String = twist();
 	//console.log(radno_polje[randombr]);
 	//document.getElementById("myTextarea").value = radno_polje[randombr]; //prikazuje text u text area
 	var div = document.getElementById("textResult");
     div.textContent = radno_polje[randombr];
     var text = div.textContent;
 
-	if(String.indexOf("zeleno") > 0){//postavljanje boja u varijablu privremena
+	if(String.indexOf("zeleno") > -1){//postavljanje boja u varijablu privremena
 		privremena = elem4;
 		document.getElementById('bodyw').style.backgroundImage = "url('img/greenc.jpg')";//green
-	}else if(String.indexOf("zuto") > 0){
+	}else if(String.indexOf("zuto") > -1){
 		privremena = elem1;
 		document.getElementById('bodyw').style.backgroundImage = "url('img/yellowc.jpg')";//yellow
-	}else if(String.indexOf("crveno") > 0){
+	}else if(String.indexOf("crveno") > -1){
 		privremena = elem2; 
 		document.getElementById('bodyw').style.backgroundImage = "url('img/redc.jpg')";//red
-	}else if(String.indexOf("plavo") > 0){
+	}else if(String.indexOf("plavo") > -1){
 		privremena = elem3;
 		document.getElementById('bodyw').style.backgroundImage = "url('img/bluec.jpg')";//blue
-	}else if(String.indexOf("zrak") > 0){
+	}else if(String.indexOf("zrak") > -1){
 		privremena = 0;
 		document.getElementById('bodyw').style.backgroundImage = "url('img/whitec.jpg')"; //white
 	}
   
-	if(String.indexOf("desna ruka") > 0){// postavljanje nogu i ruku u temp varijablu
+	if(String.indexOf("desna ruka") > -1){// postavljanje nogu i ruku u temp varijablu
 		temp = desruk;
-	}else if(String.indexOf("lijeva ruka") > 0){
+	}else if(String.indexOf("lijeva ruka") > -1){
 		temp = lijruk;
-	}else if(String.indexOf("desna noga") > 0){
+	}else if(String.indexOf("desna noga") > -1){
 		temp = desnog;
-	}else if(String.indexOf("lijeva noga") > 0){
+	}else if(String.indexOf("lijeva noga") > -1){
 		temp = lijnog;
 	}
 }

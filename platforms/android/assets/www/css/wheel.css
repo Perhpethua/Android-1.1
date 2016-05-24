@@ -24,6 +24,7 @@ header{
 #bodyw{
 	background: url("../img/index.png");
 	z-index: 1000;
+
 }
 #sidebar{
 	overflow: auto;       /*da bi sidebar bio scrollable*/
@@ -31,6 +32,9 @@ header{
 	background: url("../img/obrnuto.png");
 	background-size: cover;
 	padding: 0px;
+	//box-shadow: 10px 10px 10px #484848 inset;
+	//-webkit-box-shadow: 10px 10px 10px #484848 inset;
+	//-moz-box-shadow: 10px 10px 10px #484848 inset;
 }
 #menubtn{
 		
@@ -117,13 +121,16 @@ small{
 }
 /*=====================NAVIGATION=====================================================*/
 #list1{
-	padding-left: 15px;
+	padding-left: 108px;
+	padding-top: 50px;
 }
 #list2{
-	padding-left: 45px;
+	padding-left: 108px;
+	padding-top: 50px;
 }
 #list3{
-	padding-left: 10px;
+	padding-left: 108px;
+	padding-top: 50px;
 }
 a{
 	font-weight: 700;
@@ -156,6 +163,7 @@ nav a{
 	display: block;
 	padding-bottom: 69px; /* podešavanje visine klikabilnog podrucja*/
 	padding-top: 69px;    /* podešavanje visine klikabilnog podrucja*/
+	box-shadow: 10px 10px 10px #484848 inset;
 }
 
 nav a:hover{

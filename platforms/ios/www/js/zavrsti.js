@@ -25,12 +25,14 @@ function ide(e1, e2, e3, e4, e5, e6, e7, e8, speed, rez){
 	rez = document.getElementById('result'); //DODANO 18.4
 	setspeed = speed;
 /*===========media music==========================================*/	
-	//isReady();
+
+	isReady();
 
 	poljeElemenata = [elem1, elem2, elem3, elem4, desruk, lijruk, desnog, lijnog];
 	//console.log(poljeElemenata);
 	rotateAnimation(setspeed);
 }
+
 /*function dajmusic(musicid){
 	audioElement = document.getElementById(musicid);
 	url = audioElement.getAttribute('src');
@@ -46,7 +48,7 @@ function ide(e1, e2, e3, e4, e5, e6, e7, e8, speed, rez){
 
 /*function playAudio(){
 
-	var mymedia = new Media("audio/2.mp3");
+	var mymedia = new Media("/android_asset/www/audio/2.mp3");
 	mymedia.play();
 
 	var song = new Audio(); //new Audio instance
@@ -54,7 +56,7 @@ function ide(e1, e2, e3, e4, e5, e6, e7, e8, speed, rez){
 	song.play();
 
 	/*if(navigator.userAgent.match(/Android/i)){
-		var song = new Media("audio/2.mp3");
+		var song = new Media("/android_asset/www/audio/2.mp3");
 		song.play();
 		//stop after 3 sec
 		stopAudio();
@@ -195,7 +197,7 @@ function uvecajSmanji(){
 //i postavlja rezultat u privremene varijable
 		
 function staPise(){
-	String = prikazi();
+	String = twist();
 	//console.log(radno_polje[randombr]);
 	//document.getElementById("myTextarea").value = radno_polje[randombr]; //prikazuje text u text area
 	var div = document.getElementById("textResult");

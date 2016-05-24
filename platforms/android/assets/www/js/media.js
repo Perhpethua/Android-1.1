@@ -7,12 +7,7 @@ function isReady(){
 
 function onDeviceReady(){
   console.log("onDeviceReady");
-  mymedia = new Media("/android_asset/www/audio/2.mp3", function(){
-    if (mymedia) {
-      mymedia.stop();
-      mymedia.release();
-    }
-  },function(error){
+  mymedia = new Media("/android_asset/www/audio/2.mp3", stopAudio, function(error){
     console.log(error.message);
   });
 }
@@ -26,8 +21,8 @@ function stopAudio(){
 }
 $(document).ready(function(){
   
-    $('#one').click(function(event){
-      console.log("one");
+    $('#botunt').click(function(event){
+      console.log("botunt");
         mymedia.play();
     });
 });
