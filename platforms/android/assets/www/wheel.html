@@ -38,7 +38,8 @@
 		<!--my scripts-->
 		<script type="text/javascript" src="js/random.js"></script>
 		<script type="text/javascript" src="js/zavrsti.js"></script>
-		
+		<script type="text/javascript" src="js/automaticSpin.js"></script>
+        
 
 		<script type="text/javascript" src="js/jquery-1.12.3.js"></script>
 		<script src="js/jquery-1.7.1.js"></script>
@@ -72,7 +73,9 @@
     	            <small id="indextextw">SLIDE</small>
     	            <div class="logow">
     	               <img id="headerlogo" src="icon.png"/>
+                       <button id="autospin" onclick="automaticSpin()"><small id="autospinbtn">Auto Spin</small></button>
     	            </div>
+                    
     	        </header>
 
 	            <div id="main-wrapper">
@@ -84,28 +87,23 @@
 								
 				       <img id="lijr" src="img/lr.png" alt="lijevaRuka">
 				       <img id="desr" src="img/dr.png" alt="desnaRuka">
-							<img id="ln" src="img/ln.png" alt="lijevaNoga">
+					   <img id="ln" src="img/ln.png" alt="lijevaNoga">
 				       <img id="dn" src="img/dn.png" alt="desnaNoga">	
 							
-				       <button id="botunt" class="twistbtn" onclick="ide('zuta','crvena','plava','zelena','lijr','desr' ,'ln', 'dn', 2, 'result')"></button>
+				       <button id="botunt" class="twistbtn" onclick="ide()"></button>
                             
 				       <div id="textResult">
 				       	<input type="text" id="result" class="textrez" size="20">
+                        <div id="counter"></div>
 				       </div>
-			        </div>	
-
-					
-				
-					<!--<script type="text/javascript" src="js/nav.js"></script>-->
-
-
+			        </div>
 				</div>
                 <footer>
                     <small>Hybrid HTML5 CSS3 JavaScript Android Application Twister Wheel</small>
                 </footer>
             </div>
         </div>
-       
+        <script type="text/javascript" src="js/count.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="cordova.js"></script>
     </body>

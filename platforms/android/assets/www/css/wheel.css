@@ -21,6 +21,18 @@ header{
 	width: 100%;
 	z-index: 1000 !important;
 }
+#autospin{
+	background-color: Transparent;
+	border: white solid 1px;
+	margin-left: 30%;
+	display: inline-block;
+	padding-bottom: 4px;
+	padding-top: 4px;
+	margin-bottom: 2px;
+}
+#autospin:active{
+	border: green solid 1px;
+}
 #bodyw{
 	background: url("../img/index.png");
 	z-index: 1000;
@@ -49,7 +61,7 @@ header{
 #headerlogo{
 	background: url("icon.png");
 	text-align: center;
-	display: block;
+	display: inline-block;
 	background-repeat: no-repeat;
 	width: 72px;
 	height: 72px;

@@ -22,7 +22,7 @@ function stopAudio(){
 $(document).ready(function(){
   
     $('#botunt').click(function(event){
-      console.log("one");
+      console.log("botunt");
         mymedia.play();
     });
 });
