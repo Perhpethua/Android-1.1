@@ -51,9 +51,9 @@ var app = {
             //alert('Kliknuo je OK botun'); //iskoči nakon što korisnik stisne OK button
         }
         navigator.notification.alert(
-            'Version: Android_1.1                   Author: Nikolina Alajbeg                   Year: 2016', //message
+            'Version: Android_1.1\nAuthor: Nikolina Alajbeg\nYear: 2016', //message
             alertDismissed, //callback
-            'Twister Wheel Version', //title
+            'Twister Wheel', //title
             'Acknowledged' //button name
         );
     }

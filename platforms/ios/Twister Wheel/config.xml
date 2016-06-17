@@ -29,6 +29,9 @@
     <feature name="Notification">
         <param name="ios-package" value="CDVNotification" />
     </feature>
+    <feature name="SQLitePlugin">
+        <param name="ios-package" value="SQLitePlugin" />
+    </feature>
     <name>Twister Wheel</name>
     <description>
         Hybrid Android HTML5 CSS3 JS Twister Wheel Application build with PhoneGap

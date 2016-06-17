@@ -18,6 +18,9 @@
         },
         "cordova-plugin-dialogs": {
             "PACKAGE_NAME": "Twister Wheel"
+        },
+        "cordova-sqlite-storage": {
+            "PACKAGE_NAME": "Twister Wheel"
         }
     },
     "dependent_plugins": {

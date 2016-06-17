@@ -24,6 +24,8 @@
 		AEAE5B5F6AB848C39DF9181C /* CDVNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = F17D863E5116419696521A87 /* CDVNotification.m */; };
 		8EF60C58994041B2A6D095FE /* CDVNotification.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 04D1E736BFE345E7AC55865A /* CDVNotification.bundle */; };
 		BD4BCBF5B38A4914B6C7A9A2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0B3E1386C214B5D9C3A9E5B /* AudioToolbox.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		6689683F1A4D4B9EB065C49E /* SQLitePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 79FDF0EED55C47C2A43F7CA4 /* SQLitePlugin.m */; };
+		7DAF0917CEFC4F399038C142 /* sqlite3.c in Resources */ = {isa = PBXBuildFile; fileRef = 9CCB1D73E306442391B958E0 /* sqlite3.c */; settings = {COMPILER_FLAGS = "-DSQLITE_TEMP_STORE=2 -DSQLITE_THREADSAFE=2 -DSQLITE_ENABLE_FTS3 -DSQLITE_ENABLE_FTS3_PARENTHESIS -DSQLITE_ENABLE_FTS4 -DSQLITE_ENABLE_COLUMN_METADATA -DSQLITE_ENABLE_RTREE -DSQLITE_LOCKING_STYLE=1 -DSQLITE_OMIT_BUILTIN_TEST -DSQLITE_OMIT_LOAD_EXTENSION"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,10 @@
 		14E883DB2C5E4E83A1B2C4C4 /* CDVNotification.h */ = {isa = PBXFileReference; name = "CDVNotification.h"; path = "cordova-plugin-dialogs/CDVNotification.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		04D1E736BFE345E7AC55865A /* CDVNotification.bundle */ = {isa = PBXFileReference; name = "CDVNotification.bundle"; path = "CDVNotification.bundle"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.plug-in; explicitFileType = undefined; includeInIndex = 0; };
 		D0B3E1386C214B5D9C3A9E5B /* AudioToolbox.framework */ = {isa = PBXFileReference; name = "AudioToolbox.framework"; path = "System/Library/Frameworks/AudioToolbox.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		79FDF0EED55C47C2A43F7CA4 /* SQLitePlugin.m */ = {isa = PBXFileReference; name = "SQLitePlugin.m"; path = "cordova-sqlite-storage/SQLitePlugin.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		9CCB1D73E306442391B958E0 /* sqlite3.c */ = {isa = PBXFileReference; name = "sqlite3.c"; path = "cordova-sqlite-storage/sqlite3.c"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FC7B390611D04FF7B808B02F /* SQLitePlugin.h */ = {isa = PBXFileReference; name = "SQLitePlugin.h"; path = "cordova-sqlite-storage/SQLitePlugin.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		E47853CBC07541FFB9F959FC /* sqlite3.h */ = {isa = PBXFileReference; name = "sqlite3.h"; path = "cordova-sqlite-storage/sqlite3.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +204,10 @@
 				8C8DE7A3B9934EDBBFE2CE27 /* CDVViewController+SplashScreen.h */,
 				F17D863E5116419696521A87 /* CDVNotification.m */,
 				14E883DB2C5E4E83A1B2C4C4 /* CDVNotification.h */,
+				79FDF0EED55C47C2A43F7CA4 /* SQLitePlugin.m */,
+				9CCB1D73E306442391B958E0 /* sqlite3.c */,
+				FC7B390611D04FF7B808B02F /* SQLitePlugin.h */,
+				E47853CBC07541FFB9F959FC /* sqlite3.h */,
 			);
 			name = Plugins;
 			path = "Twister Wheel/Plugins";
@@ -320,6 +330,8 @@
 				20F85FBD4F394381B38F517F /* CDVSplashScreen.m in Sources */,
 				00DB07D57FFD456B88D88449 /* CDVViewController+SplashScreen.m in Sources */,
 				AEAE5B5F6AB848C39DF9181C /* CDVNotification.m in Sources */,
+				6689683F1A4D4B9EB065C49E /* SQLitePlugin.m in Sources */,
+				7DAF0917CEFC4F399038C142 /* sqlite3.c in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

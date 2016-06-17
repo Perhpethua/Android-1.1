@@ -28,14 +28,13 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1.0, minimum-scale=1.0, width=device-width, height=device-height, target-densitydpi=device-dpi" />
 
         <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <link rel="stylesheet" type="text/css" href="css/320i.css" />
         <link rel="stylesheet" type="text/css" href="css/640i.css" />
-        <link rel="stylesheet" type="text/css" href="css/480i.css" />
         <link rel="stylesheet" type="text/css" href="css/slidingview.css" />
  
 		<script src="js/jquery-1.7.1.js"></script>
         <script src="js/jquery.animate-enhanced.js"></script> 
         <script src="js/slidingview.js"></script>
+        <script src="../plugins/cordova-sqlite-storage/www/SQLitePlugin.js"></script>
 
         <script>
             $(document).ready( function() {
@@ -44,16 +43,22 @@
                 new SlidingView( 'sidebar', 'body' );
             } );
         </script>
+
+/*=================================================================================================================================*/
+        
+
+/*=================================================================================================================================*/
         <script type="text/javascript" src="js/media.js"></script>
         <title>Twister</title>
     </head>
     <body> 
         <div class="slidingview_wrapper">
             <div id="sidebar">
+            <div class="logoinfo"><img id="headerlogo" src="icon.png"/></div>
                 <nav>
-                    <a href="wheel.html">Twister Wheel</a>
-                    <a href="info.html">Info</a>
-                    <div id="deviceready"><a href="#" onclick="app.alert()">Version</a></div>
+                    <a href="wheel.html"><p class="sideP">Twister Wheel</p></a>
+                    <a href="info.html"><p class="sideP">Info</p></a>
+                    <div id="deviceready"><a href="#" onclick="app.alert()"><p class="sideP">Version</p></a></div>
                 </nav>
             </div>
             <div id="body">
@@ -64,7 +69,44 @@
                         <img id="headerlogo" src="icon.png"/><br/>
                     </div>
                 </header>
+                    <table>
+                        <tr>
+                            <th>Player 1:</th>
+                            <td><input type="text" id="playersname1" name="playerName" value="" /></td>
+                        </tr>
+                        <tr>
+                            <th>Player 2:</th>
+                            <td><input type="text" id="playersname2" name="playerName" value="" /></td>
+                        </tr>
+                        <tr>
+                            <th>Player 3:</th>
+                            <td><input type="text" id="playersname3" name="playerName" value="" /></td>
+                        </tr>
+                        <tr>
+                            <th>Player 4:</th>
+                            <td><input type="text" id="playersname4" name="playerName" value="" /></td>
+                        </tr>
+                        <tr>
+                            <th>Player 5:</th>
+                            <td><input type="text" id="playersname5" name="playerName" value="" /></td>
+                        </tr>
+                        <tr>
+                            <th>Player 6:</th>
+                            <td><input type="text" id="playersname6" name="playerName" value="" /></td>
+                        </tr>
+                        <tr>
+                            <th>Player 7:</th>
+                            <td><input type="text" id="playersname7" name="playerName" value="" /></td>
+                        </tr>
+                        <tr>
+                            <th>Player 8:</th>
+                            <td><input type="text" id="playersname8" name="playerName" value="" /></td>
+                        </tr>
 
+                        <tr>
+                            <td colspan="2"><input type="submit" value="Play" id="submitbtn"</td>
+                        </tr>
+                    </table>
                 <footer>
                     <small>Hybrid HTML5 CSS3 JavaScript Android Application Twister Wheel</small>
                 </footer>
@@ -75,8 +117,9 @@
 version of cordova.js at build time. In other words, cordova.js doesn't 
 need to be (and shouldn't be) present in your project/www folder.-->
 
-		<script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/basesql.js"></script>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
     </body>
 	
 </html>

@@ -45,5 +45,16 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
+    },
+    alert: function(){
+        function alertDismissed(){
+            //alert('Kliknuo je OK botun'); //iskoči nakon što korisnik stisne OK button
+        }
+        navigator.notification.alert(
+            'Version: Android_1.1\nAuthor: Nikolina Alajbeg\nYear: 2016', //message
+            alertDismissed, //callback
+            'Twister Wheel', //title
+            'Acknowledged' //button name
+        );
     }
 };

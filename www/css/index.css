@@ -3,10 +3,12 @@
 	background: url("../img/obrnuto.png");
 	background-size: cover;
 	padding: 0px;
-
 	overflow:auto; //added
 	-webkit-overflow-scrolling:touch; //added
 	
+}
+.sideP{
+	font-size: 17px;
 }
 #body {
 	background: url("../img/info.jpg");
@@ -17,9 +19,39 @@ header{
 	
 	z-index: 1000;
 }
+table{
+	margin-left: 15px;
+}
+input{
+	margin-top: 5px;
+	border-radius: 5px;
+	height: 20px;
+}
+th{
+	width: 100px;
+	color: white;
+}
+th, #submitbtn, #indextext, #sidebar{
+	font-family: Verdana, Geneva, sans-serif;
+}
+#submitbtn{
+	color: white;
+	font-size: 20px;
+	margin-left: 45%;
+	background-color: green;
+	height: 50px;
+	width: 70px;
+	border-radius: 5px;
+	border: none;
+	margin-top: 10px;
+}
+#submitbtn:active{
+	background-color: #484848;
+}
 .ilogo{
-	margin-top: 150px;
+	margin-top: 80px;
 	margin-left: 35%;
+	margin-bottom: 15px;
 }
 #indextext{
 	margin-left: 0px;
@@ -49,7 +81,14 @@ small{
 	margin-left: 30%; /*margin left i right pomiču text od rubova footera*/
 	margin-right: 30%;
 }
+.sideP{
+	padding-left: 15px;
+}
+.logoinfo{
 
+	padding-top: 35px;
+	padding-left: 78px;
+}
 a{
 	font-weight: 700;
 	font-size: 18px;
@@ -61,12 +100,12 @@ nav{
 	position: relative; /* da bi navigacija isla preko contenta */
 	z-index: 1000; /* da bi navigacija isla preko contenta */
 	background: rgba(0, 0, 0, 0.7);
-	margin-top: 160px;
+	margin-top: 28px;
 }
 nav a{
 	list-style: none;
-	padding-left: 0px; /* odmak od lijevog ruba */
-	margin-left: 15px;
+	padding-left: 15px; /* odmak od lijevog ruba */
+	margin-left: 0px;
 	width: 100% !important;
 	padding-bottom: 0px; /* da bude cijeli -li- clickable */
 	padding-top: 0px; /* da bude cijeli -li- clickable */
@@ -76,8 +115,8 @@ nav a{
 	color: #FFF;
 	text-decoration: none;
 	display: block;
-	padding-bottom: 69px; /* podešavanje visine klikabilnog podrucja*/
-	padding-top: 69px;    /* podešavanje visine klikabilnog podrucja*/
+	padding-bottom: 50.5px; /* podešavanje visine klikabilnog podrucja*/
+	padding-top: 50.5px;    /* podešavanje visine klikabilnog podrucja*/
 }
 
 nav a:hover{

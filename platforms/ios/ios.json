@@ -23,6 +23,10 @@
                         {
                             "xml": "<feature name=\"Notification\"><param name=\"ios-package\" value=\"CDVNotification\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SQLitePlugin\"><param name=\"ios-package\" value=\"SQLitePlugin\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -43,6 +47,9 @@
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
         "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "com.phonegap.twisterWheel"
+        },
+        "cordova-sqlite-storage": {
             "PACKAGE_NAME": "com.phonegap.twisterWheel"
         }
     },
@@ -252,6 +259,14 @@
             "merges": [
                 "navigator.notification"
             ]
+        },
+        {
+            "file": "plugins/cordova-sqlite-storage/www/SQLitePlugin.js",
+            "id": "cordova-sqlite-storage.SQLitePlugin",
+            "pluginId": "cordova-sqlite-storage",
+            "clobbers": [
+                "SQLitePlugin"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -259,6 +274,7 @@
         "cordova-plugin-media": "2.1.0",
         "cordova-plugin-splashscreen": "3.2.1",
         "cordova-plugin-whitelist": "1.2.1",
-        "cordova-plugin-dialogs": "1.2.1"
+        "cordova-plugin-dialogs": "1.2.1",
+        "cordova-sqlite-storage": "1.4.1"
     }
 }
