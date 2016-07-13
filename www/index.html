@@ -43,12 +43,9 @@
                 new SlidingView( 'sidebar', 'body' );
             } );
         </script>
-
-/*=================================================================================================================================*/
-        
-
-/*=================================================================================================================================*/
         <script type="text/javascript" src="js/media.js"></script>
+
+        
         <title>Twister</title>
     </head>
     <body> 
@@ -65,26 +62,28 @@
             <small id="indextext">SLIDE</small>
                     
                 <header>
+                <!--
                     <div class="ilogo">
                         <img id="headerlogo" src="icon.png"/><br/>
                     </div>
+                    -->
                 </header>
                     <table>
                         <tr>
                             <th>Player 1:</th>
-                            <td><input type="text" id="playersname1" name="playerName" value="" /></td>
+                            <td><input type="text" id="playersname1" name="playerName" value="hani" /></td>
                         </tr>
                         <tr>
                             <th>Player 2:</th>
-                            <td><input type="text" id="playersname2" name="playerName" value="" /></td>
+                            <td><input type="text" id="playersname2" name="playerName" value="hanuska" /></td>
                         </tr>
                         <tr>
                             <th>Player 3:</th>
-                            <td><input type="text" id="playersname3" name="playerName" value="" /></td>
+                            <td><input type="text" id="playersname3" name="playerName" value="ivan" /></td>
                         </tr>
                         <tr>
                             <th>Player 4:</th>
-                            <td><input type="text" id="playersname4" name="playerName" value="" /></td>
+                            <td><input type="text" id="playersname4" name="playerName" value="nikolina" /></td>
                         </tr>
                         <tr>
                             <th>Player 5:</th>
@@ -104,9 +103,12 @@
                         </tr>
 
                         <tr>
-                            <td colspan="2"><input type="submit" value="Play" id="submitbtn"</td>
+                            <td colspan="2"><input type="submit" value="Play" id="submitbtn"></td>
                         </tr>
                     </table>
+                    <!--<a href="pdata.html">Open pdata</a>-->
+                    <input type="submit" value="Info" id="subb"/>
+                    <div id="divResponse"></div>
                 <footer>
                     <small>Hybrid HTML5 CSS3 JavaScript Android Application Twister Wheel</small>
                 </footer>
