@@ -8,17 +8,14 @@
         Nikolina Alajbeg
     </author>
     <content src="index.html" />
-<!--dodano zbog cordova plugin add cordova-plugin-media -->
-	<preference name="AndroidPersistentFileLocation" value="Compatibility" />
-
+    <preference name="AndroidPersistentFileLocation" value="Compatibility" />
     <preference name="permissions" value="none" />
-	<preference name="orientation" value="default" />
+    <preference name="orientation" value="default" />
     <preference name="phonegap-version" value="3.7.0" />
     <preference name="target-device" value="universal" />
     <preference name="fullscreen" value="true" />
     <preference name="android-minSdkVersion" value="14" />
-	
-	<preference name="webviewbounce" value="true" />
+    <preference name="webviewbounce" value="true" />
     <preference name="prerendered-icon" value="true" />
     <preference name="stay-in-webview" value="false" />
     <preference name="ios-statusbarstyle" value="black-opaque" />
@@ -27,8 +24,7 @@
     <preference name="show-splash-screen-spinner" value="true" />
     <preference name="auto-hide-splash-screen" value="true" />
     <preference name="disable-cursor" value="false" />
-	
-	<gap:plugin name="org.apache.cordova.battery-status" />
+    <gap:plugin name="org.apache.cordova.battery-status" />
     <gap:plugin name="org.apache.cordova.camera" />
     <gap:plugin name="org.apache.cordova.media-capture" />
     <gap:plugin name="org.apache.cordova.console" />
@@ -46,100 +42,60 @@
     <gap:plugin name="org.apache.cordova.network-information" />
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <gap:plugin name="org.apache.cordova.vibration" />
-	<icon src="icon.png" />
-<!--==============================================================================================-->
-<feature name="Media">
-    <param name="android-package" value="org.apache.cordova.media.AudioHandler" />
-</feature>
-<!-- ===================== SPLASH SCREEN =========================-->		
-	<preference name="SplashScreen" value="screen"/>
-	<preference name="SplashScreenDelay" value="3000"/>
-	<preference name="SplashShowOnlyFirstTime" value="false" />
-<!--===========ANDROID=============================================================================-->  
-
+    <icon src="icon.png" />
+    <feature name="Media">
+        <param name="android-package" value="org.apache.cordova.media.AudioHandler" />
+    </feature>
+    <preference name="SplashScreen" value="screen" />
+    <preference name="SplashScreenDelay" value="3000" />
+    <preference name="SplashShowOnlyFirstTime" value="false" />
     <platform name="android">
-        <splash src="res/screen/android/screen-hdpi-landscape.png" density="land-hdpi" />
-        <splash src="res/screen/android/screen-ldpi-landscape.png" density="land-ldpi" />
-        <splash src="res/screen/android/screen-mdpi-landscape.png" density="land-mdpi" />
-        <splash src="res/screen/android/screen-xhdpi-landscape.png" density="land-xhdpi" />
-
-        <splash src="res/screen/android/screen-hdpi-portrait.png" density="port-hdpi" />
-        <splash src="res/screen/android/screen-ldpi-portrait.png" density="port-ldpi" />
-        <splash src="res/screen/android/screen-mdpi-portrait.png" density="port-mdpi" />
-        <splash src="res/screen/android/screen-xhdpi-portrait.png" density="port-xhdpi" />
+        <splash density="land-hdpi" src="res/screen/android/screen-hdpi-landscape.png" />
+        <splash density="land-ldpi" src="res/screen/android/screen-ldpi-landscape.png" />
+        <splash density="land-mdpi" src="res/screen/android/screen-mdpi-landscape.png" />
+        <splash density="land-xhdpi" src="res/screen/android/screen-xhdpi-landscape.png" />
+        <splash density="port-hdpi" src="res/screen/android/screen-hdpi-portrait.png" />
+        <splash density="port-ldpi" src="res/screen/android/screen-ldpi-portrait.png" />
+        <splash density="port-mdpi" src="res/screen/android/screen-mdpi-portrait.png" />
+        <splash density="port-xhdpi" src="res/screen/android/screen-xhdpi-portrait.png" />
     </platform>
-	
-
-<!--==========IOS===================================================================================-->
-<platform name="ios">
-    <splash src="res/screen/ios/screen-iphone-portrait.png" width="320" height="480"/>
-    <splash src="res/screen/ios/screen-iphone-portrait-2x.png" width="640" height="960"/>
-    <splash src="res/screen/ios/screen-ipad-landscape.png" width="768" height="1024"/>
-    <splash src="res/screen/ios/screen-ipad-landscape-2x.png" width="1536" height="2048"/>
-    <splash src="res/screen/ios/screen-ipad-landscape.png" width="1024" height="768"/>
-    <splash src="res/screen/ios/screen-ipad-landscape-2x.png" width="2048" height="1536"/>
-    <splash src="res/screen/ios/screen-iphone-portrait-568h-2x.png" width="640" height="1136"/>
-    <splash src="res/screen/ios/screen-750-1334.png" width="750" height="1334"/>
-    <splash src="res/screen/ios/screen-1242-2208.png" width="1242" height="2208"/>
-    <splash src="res/screen/ios/screen-2208-1242.png" width="2208" height="1242"/>
-</platform>
-<!--============WINDOWS=============================================================================-->
-<platform name="windows">
-    <splash src="res/screen/windows/splashScreen620.png" width="620" height="300"/>
-    <splash src="res/screen/windows/splashScreen1152.png" width="1152" height="1920"/>
-</platform>
-<!--================================================================================================-->
+    <platform name="ios">
+        <splash height="480" src="res/screen/ios/screen-iphone-portrait.png" width="320" />
+        <splash height="960" src="res/screen/ios/screen-iphone-portrait-2x.png" width="640" />
+        <splash height="1024" src="res/screen/ios/screen-ipad-landscape.png" width="768" />
+        <splash height="2048" src="res/screen/ios/screen-ipad-landscape-2x.png" width="1536" />
+        <splash height="768" src="res/screen/ios/screen-ipad-landscape.png" width="1024" />
+        <splash height="1536" src="res/screen/ios/screen-ipad-landscape-2x.png" width="2048" />
+        <splash height="1136" src="res/screen/ios/screen-iphone-portrait-568h-2x.png" width="640" />
+        <splash height="1334" src="res/screen/ios/screen-750-1334.png" width="750" />
+        <splash height="2208" src="res/screen/ios/screen-1242-2208.png" width="1242" />
+        <splash height="1242" src="res/screen/ios/screen-2208-1242.png" width="2208" />
+    </platform>
+    <platform name="windows">
+        <splash height="300" src="res/screen/windows/splashScreen620.png" width="620" />
+        <splash height="1920" src="res/screen/windows/splashScreen1152.png" width="1152" />
+    </platform>
     <gap:splash gap:platform="winphone" src="www/res/screen/windows-phone/screen-portrait.jpg" />
-	<gap:splash gap:platform="blackberry" src="www/res/screen/blackberry/screen-225.png" />
-	<!--========== BROWSER ===================-->
-	<platform name="browser">
-		<preference name="SplashScreen" value="platforms/browser/img/logo.png" /> <!-- defaults to "/img/logo.png" -->
-		<preference name="SplashScreenDelay" value="5000" /> <!-- defaults to "3000" -->
-		<preference name="SplashScreenBackgroundColor" value="#464646" /> <!-- defaults to "#464646" -->
-		<preference name="ShowSplashScreen" value="true" /> <!-- defaults to "true" -->
-		<preference name="SplashScreenWidth" value="170" /> <!-- defaults to "170" -->
-		<preference name="SplashScreenHeight" value="200" /> <!-- defaults to "200" -->
-	</platform>
-<!--=========== set icon location ===============================-->
-	<platform name="android">
-    <!--
-            ldpi    : 36x36 px
-            mdpi    : 48x48 px
-            hdpi    : 72x72 px
-            xhdpi   : 96x96 px
-            xxhdpi  : 144x144 px
-            xxxhdpi : 192x192 px
-        -->
-        <icon src="res/icon/android/icon-36-ldpi.png" density="ldpi" />
-		<icon src="res/icon/android/icon-48-mdpi.png" density="mdpi" />
-		<icon src="res/icon/android/icon-72-hdpi.png" density="hdpi" />
-		<icon src="res/icon/android/icon-96-xhdpi.png" density="xhdpi" />
-  </platform>
-	 
-	<platform name="ios">
-<!-- iOS 7.0+ -->
-<!-- iPhone / iPod Touch  -->
-    <!-- treba dodati <icon src="res/ios/icon/icon-60.png" width="60" height="60" /> -->
-    <!-- treba dodati <icon src="res/ios/icon/icon-60-2x.png" width="120" height="120" /> -->
-<!-- iPad -->
-    <!-- treba dodati <icon src="res/ios/icon/icon-76.png" width="76" height="76" /> -->
-    <!-- treba dodati <icon src="res/ios/icon/icon-76-2x.png" width="152" height="152" /> -->
-<!-- iOS 6.1 -->
-<!-- Spotlight Icon -->
-    <!-- treba dodati <icon src="res/ios/icon/icon-40.png" width="40" height="40" /> -->
-    <!-- treba dodati <icon src="res/ios/icon/icon-40-2x.png" width="80" height="80" /> -->
-<!-- iPhone / iPod Touch -->
-    <icon src="res/icon/ios/icon-57.png" width="57" height="57" />
-    <icon src="res/icon/ios/icon-57-2x.png" width="114" height="114" />
-<!-- iPad -->
-    <icon src="res/icon/ios/icon-72.png" width="72" height="72" />
-    <icon src="res/icon/ios/icon-72-2x.png" width="144" height="144" />
-<!-- iPhone Spotlight and Settings Icon -->
-    <!-- treba dodati <icon src="res/ios/icon/icon-small.png" width="29" height="29" /> -->
-    <!-- treba dodati <icon src="res/ios/icon/icon-small-2x.png" width="58" height="58" /> -->
-<!--iPad Spotlight and Settings Icon -->
-    <!-- treba dodati <icon src="res/ios/icon/icon-50.png" width="50" height="50" /> -->
-    <!-- treba dodati <icon src="res/ios/icon/icon-50-2x.png" width="100" height="100" /> -->
-  </platform>
-  
+    <gap:splash gap:platform="blackberry" src="www/res/screen/blackberry/screen-225.png" />
+    <platform name="browser">
+        <preference name="SplashScreen" value="platforms/browser/img/logo.png" />
+        <preference name="SplashScreenDelay" value="5000" />
+        <preference name="SplashScreenBackgroundColor" value="#464646" />
+        <preference name="ShowSplashScreen" value="true" />
+        <preference name="SplashScreenWidth" value="170" />
+        <preference name="SplashScreenHeight" value="200" />
+    </platform>
+    <platform name="android">
+        <icon density="ldpi" src="res/icon/android/icon-36-ldpi.png" />
+        <icon density="mdpi" src="res/icon/android/icon-48-mdpi.png" />
+        <icon density="hdpi" src="res/icon/android/icon-72-hdpi.png" />
+        <icon density="xhdpi" src="res/icon/android/icon-96-xhdpi.png" />
+    </platform>
+    <platform name="ios">
+        <icon height="57" src="res/icon/ios/icon-57.png" width="57" />
+        <icon height="114" src="res/icon/ios/icon-57-2x.png" width="114" />
+        <icon height="72" src="res/icon/ios/icon-72.png" width="72" />
+        <icon height="144" src="res/icon/ios/icon-72-2x.png" width="144" />
+    </platform>
+    <plugin name="cordova-sqlite-storage" spec="~1.4.1" />
 </widget>
