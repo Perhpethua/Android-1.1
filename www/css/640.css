@@ -1,4 +1,7 @@
 @media screen and (max-device-width: 640px){
+	#divB{
+		z-index: -1;
+	}
 	.logo{
 		margin-top: 150px !important;
 		margin-left: 10px !important;
@@ -24,7 +27,7 @@
 	}
 	#textResult{
 		width: 100% !important;
-		margin-top: 200px !important;
+		margin-top: 100px !important;
 		margin-left: 0px !important;
 		text-align: center;
 	}
@@ -36,38 +39,44 @@
 		display: inline-block;
 	}
 /*=========================================================UDOVI======================================================================*/
+	.twistbtn {
+		background: url("../img/button.png") no-repeat center top;
+		z-index: 1 !important;
+	    height: 100px;
+		width: 100px;
+		border: none;
+		margin-left: 36% !important;
+		margin-top: 150px !important;
+		position: relative;
+	}
 	#lijr{
 		background: url("../img/lr.png");
-		z-index:1;
 		position:absolute;
 		left: 15.5% !important ;
-		top: 32% !important;
+		top: 17% !important;	
 	}
 	#desr{
 		background: url("../img/dr.png");
-		z-index:1;
 		position:absolute;
 		left: 51% !important;
-		top: 32% !important;
+		top: 17% !important;	
 	}
 	#dn{
 		background: url("../img/dn.png");
-		z-index:1;
 		position:absolute;
 		left: 51% !important;
-		top: 57% !important;
+		top: 39% !important;	
 	}
 	#ln{
 		background: url("../img/ln.png");
-		z-index:1;
 		position:absolute;
 		left: 15.5% !important;
-		top: 57% !important;
+		top: 39% !important;
 	}
 
 	#crvena{
 		left: 23% !important;
-		top: 37.5% !important;
+		top: 21% !important;
 		position:absolute;
 		content: url("../img/crvena320.png");
 	}
@@ -75,31 +84,23 @@
 	#zelena{
 		position:absolute;
 		left: 51% !important;
-		top: 37.5% !important;
+		top: 21% !important;
 		content: url("../img/zelena320.png");
 	}
 	#zuta{
 		position: absolute;
 		left: 23% !important;
-		top: 58% !important;
+		top: 41% !important;
 		content: url("../img/zuta320.png");
 	}
 
 	#plava{
 		position:absolute;
 		left: 51% !important;
-		top: 58% !important;
+		top: 41% !important;
 		content: url("../img/plava320.png");
 	}
-	.twistbtn {
-		background: url("../img/button.png") no-repeat center top;
-		z-index: 1000;
-	    height: 100px;
-		width: 100px;
-		border: none;
-		margin-left: 36% !important;
-		margin-top: 150px !important;
-	}
+	
 /*=========================================================NAVIGACIJA=================================================================*/
 	#sidet1{ /*home*/
 		padding-left: 95px;

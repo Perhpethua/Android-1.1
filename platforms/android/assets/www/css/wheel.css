@@ -29,6 +29,7 @@ header{
 	padding-bottom: 4px;
 	padding-top: 4px;
 	margin-bottom: 2px;
+	border-radius: 5px;
 }
 #autospin:active{
 	border: green solid 1px;
@@ -84,7 +85,7 @@ header{
 	margin-bottom: 0px; /*move from bottom*/
 }
 #crvena, #zelena, #plava, #zuta, #lijr, #desr, #ln, #dn, #botunt{
-	z-index: -1000 !important; /* da elementi budu ispod navigacije kad se pojavi */
+	z-index: 1000 !important; /* da elementi budu ispod navigacije kad se pojavi */
 }
 /*=======================PRIKAZ REZULTATA=========================================*/
 #textResult{

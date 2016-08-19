@@ -54,7 +54,7 @@ var app = {
             'Version: Android_1.1\nAuthor: Nikolina Alajbeg\nYear: 2016', //message
             alertDismissed, //callback
             'Twister Wheel', //title
-            'Acknowledged' //button name
+            'Great' //button name
         );
     }
 };

@@ -1,4 +1,6 @@
-
+#divB {
+    display: none;
+}
 #sidebar{
 	background: url("../img/obrnuto.png");
 	background-size: cover;
@@ -13,14 +15,18 @@
 #body {
 	background: url("../img/info.jpg");
 	background-size: cover;
-	padding:10px;
+	padding-left: 0px !important;
+}
+.slidingview_body{
+	padding-left: 0px;
 }
 header{
 	
 	z-index: 1000;
 }
 table{
-	margin-left: 15px;
+	margin-left: 25px;
+
 }
 input{
 	margin-top: 5px;
@@ -48,6 +54,20 @@ th, #submitbtn, #indextext, #sidebar{
 #submitbtn:active{
 	background-color: #484848;
 }
+#btn0, #btn1, #btn2, #btn3, #btn4, #btn5, #btn6, #btn7{
+	color: white;
+	font-size: 14px;
+	margin-left: 2px;
+	background-color: #008B8B;
+	height: 35px;
+	width: 70px;
+	border-radius: 5px;
+	border: none;
+	margin-top: 2px;
+}
+#btn0, #btn1, #btn2, #btn3, #btn4, #btn5, #btn6, #btn7:active{
+	background-color: #484848;
+}
 .ilogo{
 	margin-top: 80px;
 	margin-left: 35%;
@@ -55,7 +75,7 @@ th, #submitbtn, #indextext, #sidebar{
 }
 #indextext{
 	margin-left: 0px;
-	padding-left: 0px;
+	padding-left: 10px;
 	margin-top: 50px;
 	font-weight: bolder;
 	letter-spacing: 5px;
