@@ -13,7 +13,7 @@ function onDeviceReady(){
 }
 
 function stopAudio(){
-  console.log("stop");
+  //console.log("stop");
   if(mymedia){
     mymedia.stop();
     mymedia.release();

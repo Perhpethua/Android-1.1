@@ -1,6 +1,23 @@
 #divB {
     display: none;
 }
+#tablica1{
+	padding-top: 50px;
+}
+#back{
+	float: left;
+	color: white;
+	background-color: Transparent;
+	border: white solid 1px;
+	margin-right: 2px;
+	margin-top: 50px;
+	margin-left: 0px;
+	display: inline-block;
+	padding-bottom: 4px;
+	padding-top: 4px;
+	margin-bottom: 2px;
+	border-radius: 5px;	
+}
 #sidebar{
 	background: url("../img/obrnuto.png");
 	background-size: cover;
@@ -35,21 +52,21 @@ input{
 }
 th{
 	width: 100px;
-	color: white;
+	color: rgb(0, 255, 100);
 }
 th, #submitbtn, #indextext, #sidebar{
 	font-family: Verdana, Geneva, sans-serif;
 }
 #submitbtn{
 	color: white;
-	font-size: 20px;
-	margin-left: 45%;
+	font-size: 25px;
+	margin-left: 38%;
 	background-color: green;
-	height: 50px;
-	width: 70px;
-	border-radius: 5px;
+	height: 80px;
+	width: 110px;
+	border-radius: 15px 70px;
 	border: none;
-	margin-top: 10px;
+	margin-top: 20px;
 }
 #submitbtn:active{
 	background-color: #484848;
@@ -65,9 +82,9 @@ th, #submitbtn, #indextext, #sidebar{
 	border: none;
 	margin-top: 2px;
 }
-#btn0, #btn1, #btn2, #btn3, #btn4, #btn5, #btn6, #btn7:active{
+/*#btn0, #btn1, #btn2, #btn3, #btn4, #btn5, #btn6, #btn7:active{
 	background-color: #484848;
-}
+}*/
 .ilogo{
 	margin-top: 80px;
 	margin-left: 35%;

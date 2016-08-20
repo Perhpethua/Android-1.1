@@ -53,17 +53,11 @@ var lr = opcije[17], //početne vrijednosti gdje je lijeva
 	dr = opcije[16], // i desna ruka u zraku
 	ln, dn;
 var randombr;
-
-/*function twist(){//poziva je button
-	// POZIVANJE ANIMACIJE 
-	prikazi();
-}
-*/
 function randomf(max){
 	return Math.floor(Math.random() * max);
 }
 //console.log(randomf(1, 10));
-//console.log(Math.floor(Math.random()*(10-1)+1));+
+//console.log(Math.floor(Math.random()*(10-1)+1));
 
 
 function twist(){ //poziva je button

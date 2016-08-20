@@ -22,9 +22,13 @@ header{
 	z-index: 1000 !important;
 }
 #autospin{
+	float: right;
+	color: white;
 	background-color: Transparent;
 	border: white solid 1px;
 	margin-left: 30%;
+	margin-top: 25px;
+	margin-right: 2px;
 	display: inline-block;
 	padding-bottom: 4px;
 	padding-top: 4px;

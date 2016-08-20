@@ -1,6 +1,6 @@
-$('#toggle').click(function() {
+$('#submitbtn').click(function() {
     $('#container > .toggleMe').slideToggle();
-    $(this).text(function(i,txt) {
-        return txt === "PREVIOUS" ? "NEXT" : "PREVIOUS";
-    });
+});
+$('#back').click(function(){
+	$('#container > .toggleMe').slideToggle();
 });

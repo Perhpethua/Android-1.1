@@ -56,5 +56,14 @@ var app = {
             'Twister Wheel', //title
             'Great' //button name
         );
+    }, 
+    winner: function(){
+        function alertDismissed(){
+        }
+        navigator.notification.alert(
+                                     'Last man standing', 
+                                     alertDismissed, 
+                                     'WINNER!!', 
+                                     'OK');
     }
 };
