@@ -28,6 +28,8 @@
 }
 .sideP{
 	font-size: 17px;
+	padding-left: 50px;
+	padding-top: 38px;
 }
 #body {
 	background: url("../img/info.jpg");
@@ -82,9 +84,6 @@ th, #submitbtn, #indextext, #sidebar{
 	border: none;
 	margin-top: 2px;
 }
-/*#btn0, #btn1, #btn2, #btn3, #btn4, #btn5, #btn6, #btn7:active{
-	background-color: #484848;
-}*/
 .ilogo{
 	margin-top: 80px;
 	margin-left: 35%;
@@ -117,9 +116,6 @@ small{
 	margin-bottom: 2px; /*udaljenost texta od dna*/
 	margin-left: 30%; /*margin left i right pomiču text od rubova footera*/
 	margin-right: 30%;
-}
-.sideP{
-	padding-left: 15px;
 }
 .logoinfo{
 

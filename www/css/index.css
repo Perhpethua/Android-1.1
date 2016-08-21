@@ -28,6 +28,8 @@
 }
 .sideP{
 	font-size: 17px;
+	padding-left: 50px;
+	padding-top: 38px;
 }
 #body {
 	background: url("../img/info.jpg");
@@ -114,9 +116,6 @@ small{
 	margin-bottom: 2px; /*udaljenost texta od dna*/
 	margin-left: 30%; /*margin left i right pomiču text od rubova footera*/
 	margin-right: 30%;
-}
-.sideP{
-	padding-left: 15px;
 }
 .logoinfo{
 

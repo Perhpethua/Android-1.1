@@ -27,6 +27,7 @@ function openDB(){ // otvaranje baze
 }
 function makeDB(){ 
     db = openDB();
+    deleteAll();
    // navigator.notification.alert(db); //object Object
     db.transaction(createDB, errorcb, successcb);
     fillDB();
@@ -46,11 +47,10 @@ function errorcb(){
 function fillDB(){
 
     db = openDB();
-    
     navigator.notification.alert("insert into table p1 p2");
 
     db.transaction(function (tx){
-            tx.executeSql('INSERT INTO player (name) VALUES ("")', [], defaultsuccess, defaultfault);
+            tx.executeSql('INSERT INTO player (id, name) VALUES ( 1, "")', [], defaultsuccess, defaultfault);
         },transactionfault, transactionsucces);
    
     var qry2 = 'INSERT INTO player (id, name) VALUES ( 2, "")';

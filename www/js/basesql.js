@@ -7,18 +7,22 @@
   });
 });*/
 function defaultsuccess(){
-    navigator.notification.alert("default success");
+    //navigator.notification.alert("default success");
 }
 function defaultfault(error){
     navigator.notification.alert("default pogreska: " + error);
 }
 function transactionsucces(){
-    navigator.notification.alert("Transaction success");
+    //navigator.notification.alert("Transaction success");
 }
 function transactionfault(error){
     navigator.notification.alert("Transaction fault " + error);
 }
-function getRecords(){
+function resultError(error){
+    navigator.notification.alert("greska e: " + error.message);
+}
+
+function getRecords(tx){
     db = openDB();
     db.transaction(function (tx){
         //navigator.notification.alert("getRecords");
@@ -27,13 +31,10 @@ function getRecords(){
 }
 
 function resultSuccess(tx, response){
-    navigator.notification.alert("Response : " + response);
-
-
     var div = document.getElementById("divResponse");
     var temp = "<table></table>";
 
-    navigator.notification.alert(response.rows.length); //4
+    navigator.notification.alert(response.rows.length); //8
 
     for (var i = 0; i < response.rows.length; i++) { //append all strings
         //alert(response.rows.item(i).id);
@@ -43,7 +44,7 @@ function resultSuccess(tx, response){
             activeNum++;
             mapa[i][1]=1; 
         }
-        alert(mapa);
+        //alert(mapa);
 //temp += "<button>" + response.rows.item(i).name+"</button>";
 //$(div).append(temp += '<button id="btn' + i + '" onClick="tellId(this.id)">' + response.rows.item(i).name + '</button>');
 //alert(response.rows.item(i)).name);
@@ -55,28 +56,16 @@ function tellId(clicked_id){
     navigator.notification.alert(clicked_id);
 }
 
-function resultError(error){
-    navigator.notification.alert("greska e: " + error.message);
-}
-
 function getplayers(){
     //if(!clickable)return;
     pname1 = document.getElementById("playersname1").value;
-    //navigator.notification.alert(pname1);
     pname2 = document.getElementById("playersname2").value;
-    //navigator.notification.alert(pname2);
     pname3 = document.getElementById("playersname3").value;
-    //navigator.notification.alert(pname3);
     pname4 = document.getElementById("playersname4").value;
-    //navigator.notification.alert(pname4);
     pname5 = document.getElementById("playersname5").value;
-    //navigator.notification.alert(pname5);
     pname6 = document.getElementById("playersname6").value;
-    //navigator.notification.alert(pname6);
     pname7 = document.getElementById("playersname7").value;
-    //navigator.notification.alert(pname7);
     pname8 = document.getElementById("playersname8").value; 
-    //navigator.notification.alert(pname8);
 
     //navigator.notification.alert(pname1);
     if( pname1=="" || pname2=="" ){
@@ -147,6 +136,13 @@ function deletePlayer(idDelete){
     db.transaction(function (tx, response){
             tx.executeSql('DELETE FROM player WHERE id=?', [idDelete], deleteSuccess, deleteFail);
         },transactionfault, transactionsucces);
+}
+
+function deleteAll(){
+    db = openDB();
+    db.transaction(function (tx, response){
+        tx.executeSql('DELETE FROM player', [], deleteSuccess, deleteFail);
+    },transactionfault, transactionsucces);
 }
 function deleteSuccess(){
     navigator.notification.alert("delete Success");

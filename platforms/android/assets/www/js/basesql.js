@@ -1,4 +1,3 @@
-// DUŽI NAČIN -- RADI
 /*document.addEventListener('deviceready', function() { //provjera plugin-a za rad sa bazom
   var db = window.sqlitePlugin.openDatabase({name: 'test.db', location: 'default'});
   db.transaction(function(tr) {
@@ -8,7 +7,7 @@
   });
 });*/
 function defaultsuccess(){
-    navigator.notification.alert("default success");
+    //navigator.notification.alert("default success");
 }
 function defaultfault(error){
     navigator.notification.alert("default pogreska: " + error);
@@ -19,7 +18,11 @@ function transactionsucces(){
 function transactionfault(error){
     navigator.notification.alert("Transaction fault " + error);
 }
-function getRecords(){
+function resultError(error){
+    navigator.notification.alert("greska e: " + error.message);
+}
+
+function getRecords(tx){
     db = openDB();
     db.transaction(function (tx){
         //navigator.notification.alert("getRecords");
@@ -28,9 +31,6 @@ function getRecords(){
 }
 
 function resultSuccess(tx, response){
-    navigator.notification.alert("Response : " + response);
-
-
     var div = document.getElementById("divResponse");
     var temp = "<table></table>";
 
@@ -44,7 +44,7 @@ function resultSuccess(tx, response){
             activeNum++;
             mapa[i][1]=1; 
         }
-        alert(mapa);
+        //alert(mapa);
 //temp += "<button>" + response.rows.item(i).name+"</button>";
 //$(div).append(temp += '<button id="btn' + i + '" onClick="tellId(this.id)">' + response.rows.item(i).name + '</button>');
 //alert(response.rows.item(i)).name);
@@ -54,10 +54,6 @@ function resultSuccess(tx, response){
 }
 function tellId(clicked_id){
     navigator.notification.alert(clicked_id);
-}
-
-function resultError(error){
-    navigator.notification.alert("greska e: " + error.message);
 }
 
 function getplayers(){
@@ -148,6 +144,13 @@ function deletePlayer(idDelete){
     db.transaction(function (tx, response){
             tx.executeSql('DELETE FROM player WHERE id=?', [idDelete], deleteSuccess, deleteFail);
         },transactionfault, transactionsucces);
+}
+
+function deleteAll(){
+    db = openDB();
+    db.transaction(function (tx, response){
+        tx.executeSql('DELETE FROM player', [], deleteSuccess, deleteFail);
+    },transactionfault, transactionsucces);
 }
 function deleteSuccess(){
     navigator.notification.alert("delete Success");

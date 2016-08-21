@@ -128,14 +128,7 @@ function rotateAnimation(setspeed){
 	}
 }
 
-/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-		//prikazi();
-		//funkc uvecaj/smanji
-		//dohvati string iz fun prikazi()
-		//provjeri da li se radi o boji ili rukama i nogama
-		//funk koja rezultat iz prikazi stavlja u varijabl -> korisit global
-		
-//funkcija animira slike ovisno o dobivenom rezultatu		
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/	
 function uvecajSmanji(){
 	staPise();
 	var i = 0;
