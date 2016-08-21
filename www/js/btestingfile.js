@@ -124,7 +124,6 @@ alert(names);
     for(var i = 0; i < 8; i++){
         pname[i] = document.getElementById(names[i]).value;
     }
-    
         //alert(pname1);
         //if( ((pname[0] || (pname[1] || pname[2]|| pname[3]|| pname[4]|| pname[5]|| pname[6]|| pname[7]))=="") || () || ())...
     if(pname[0]=="" || pname[1]==""){

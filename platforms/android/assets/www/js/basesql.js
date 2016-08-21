@@ -7,25 +7,24 @@
   });
 });*/
 function defaultsuccess(){
-    //navigator.notification.alert("default success");
+    console.log("default success");
 }
 function defaultfault(error){
-    navigator.notification.alert("default pogreska: " + error);
+    console.log("default pogreska: " + error);
 }
 function transactionsucces(){
-    navigator.notification.alert("Transaction success");
+    console.log("Transaction success");
 }
 function transactionfault(error){
-    navigator.notification.alert("Transaction fault " + error);
+    console.log("Transaction fault " + error);
 }
 function resultError(error){
-    navigator.notification.alert("greska e: " + error.message);
+    console.log("greska e: " + error.message);
 }
 
 function getRecords(tx){
     db = openDB();
     db.transaction(function (tx){
-        //navigator.notification.alert("getRecords");
         tx.executeSql("SELECT * FROM player", [], resultSuccess, resultError);
     }, transactionfault, transactionsucces );
 }
@@ -34,50 +33,39 @@ function resultSuccess(tx, response){
     var div = document.getElementById("divResponse");
     var temp = "<table></table>";
 
-    navigator.notification.alert(response.rows.length); //4
+    console.log(response.rows.length); //8
 
     for (var i = 0; i < response.rows.length; i++) { //append all strings
-        //alert(response.rows.item(i).id);
-        //idDelete = response.rows.item(i).id;
         if(!(response.rows.item(i).name == "")){
             $(div).append(temp += '<button id="btn' + i + '" onClick="deleteBtn(this.id)">' + response.rows.item(i).name + '</button>');
             activeNum++;
-            mapa[i][1]=1; 
+            //alert(statusTemp);
         }
-        //alert(mapa);
 //temp += "<button>" + response.rows.item(i).name+"</button>";
 //$(div).append(temp += '<button id="btn' + i + '" onClick="tellId(this.id)">' + response.rows.item(i).name + '</button>');
 //alert(response.rows.item(i)).name);
     }
-
     div.innerHTML = temp;
 }
-function tellId(clicked_id){
-    navigator.notification.alert(clicked_id);
-}
-
 function getplayers(){
-    //if(!clickable)return;
     pname1 = document.getElementById("playersname1").value;
-    //navigator.notification.alert(pname1);
     pname2 = document.getElementById("playersname2").value;
-    //navigator.notification.alert(pname2);
     pname3 = document.getElementById("playersname3").value;
-    //navigator.notification.alert(pname3);
     pname4 = document.getElementById("playersname4").value;
-    //navigator.notification.alert(pname4);
     pname5 = document.getElementById("playersname5").value;
-    //navigator.notification.alert(pname5);
     pname6 = document.getElementById("playersname6").value;
-    //navigator.notification.alert(pname6);
     pname7 = document.getElementById("playersname7").value;
-    //navigator.notification.alert(pname7);
     pname8 = document.getElementById("playersname8").value; 
-    //navigator.notification.alert(pname8);
 
-    //navigator.notification.alert(pname1);
+    pnameNiz = [pname1, pname2, pname3, pname4, pname5, pname6, pname7, pname8];  //spremljena imena igraca
+    for(var i = 0; i < pnameNiz.length; i++){
+        if(pnameNiz[i] != ""){ //tj upisano je ime igraca
+            statusTemp[i] = 1;
+        }else{
+            statusTemp[i] = 0;
+        }
+    }
     if( pname1=="" || pname2=="" ){
-        //navigator.notification.alert("prazna polja");
         navigator.notification.alert("2 players are minimum!", null, "Fill up to continue", "Ok");                
     }else{
         unesi();
@@ -90,48 +78,49 @@ function unesi(tx){ // funkcija update podatke u tablicu
 
     db = openDB();
     
-    navigator.notification.alert("UPDATE table");
+    //console.log("UPDATE table");
 
+    var qry1 = 'UPDATE player SET name = "'+pname1+'", status = "'+statusTemp[0]+'" WHERE id = 1';
     db.transaction(function (tx){
-            tx.executeSql('UPDATE player SET name = "'+pname1+'" WHERE id = 1', [], defaultsuccess, defaultfault);
-        },transactionfault, transactionsucces);
+        tx.executeSql(qry1, [], defaultsuccess, defaultfault);
+    },transactionfault, transactionsucces);
    
-    var qry2 = 'UPDATE player SET name = "'+pname2+'" WHERE id = 2';
+    var qry2 = 'UPDATE player SET name = "'+pname2+'", status = "'+statusTemp[1]+'" WHERE id = 2';
     db.transaction(function (tx){
         tx.executeSql(qry2, [], defaultsuccess, defaultfault);
     },transactionfault, transactionsucces);
 
-    var qry3 = 'UPDATE player SET name = "'+pname3+'" WHERE id = 3';
+    var qry3 = 'UPDATE player SET name = "'+pname3+'", status = "'+statusTemp[2]+'" WHERE id = 3';
     if(!(pname3 == "")){
         db.transaction(function (tx){
             tx.executeSql(qry3, [], defaultsuccess, defaultfault);  
             });  
     }
-    var qry4 = 'UPDATE player SET name = "'+pname4+'" WHERE id = 4';
+    var qry4 = 'UPDATE player SET name = "'+pname4+'", status = "'+statusTemp[3]+'" WHERE id = 4';
     if(!(pname4 == "")){
         db.transaction(function (tx){
             tx.executeSql(qry4, [], defaultsuccess, defaultfault);    
         });
     }
-    var qry5 = 'UPDATE player SET name = "'+pname5+'" WHERE id = 5';
+    var qry5 = 'UPDATE player SET name = "'+pname5+'", status = "'+statusTemp[4]+'" WHERE id = 5';
     if(!(pname5 == "")){
         db.transaction(function (tx){
             tx.executeSql(qry5, [], defaultsuccess, defaultfault);
             });    
     }
-    var qry6 = 'UPDATE player SET name = "'+pname6+'" WHERE id = 6';
+    var qry6 = 'UPDATE player SET name = "'+pname6+'", status = "'+statusTemp[5]+'" WHERE id = 6';
     if(!(pname6 == "")){
         db.transaction(function (tx){
             tx.executeSql(qry6, [], defaultsuccess, defaultfault);    
         });
     }
-    var qry7 = 'UPDATE player SET name = "'+pname7+'" WHERE id = 7';
+    var qry7 = 'UPDATE player SET name = "'+pname7+'", status = "'+statusTemp[6]+'" WHERE id = 7';
     if(!(pname7 == "")){
         db.transaction(function (tx){
             tx.executeSql(qry7, [], defaultsuccess, defaultfault);    
         });
     }
-    var qry8 = 'UPDATE player SET name = "'+pname8+'" WHERE id = 8';
+    var qry8 = 'UPDATE player SET name = "'+pname8+'", status = "'+statusTemp[7]+'" WHERE id = 8';
     if(!(pname8 == "")){
         db.transaction(function (tx){
             tx.executeSql(qry8, [], defaultsuccess, defaultfault);    
@@ -145,7 +134,6 @@ function deletePlayer(idDelete){
             tx.executeSql('DELETE FROM player WHERE id=?', [idDelete], deleteSuccess, deleteFail);
         },transactionfault, transactionsucces);
 }
-
 function deleteAll(){
     db = openDB();
     db.transaction(function (tx, response){
@@ -153,22 +141,59 @@ function deleteAll(){
     },transactionfault, transactionsucces);
 }
 function deleteSuccess(){
-    navigator.notification.alert("delete Success");
+    console.log("delete Success");
     //window.location.reload(true); //reload app da bi se izbrisao redak u tablici
 }
 function deleteFail(){
-    navigator.notification.alert("delete Fail");
-    navigator.notification.alert('DELETE error: ' + error.message);
+    console.log('DELETE error: ' + error.message);
 }
 function deleteBtn(idBotuna){
-    //alert(idBotuna.name);//undetified
+    //console.log(idBotuna); //btn0, btn1...
     document.getElementById(idBotuna).remove();
+//update baze za svaku promjenu statusa
+    if(idBotuna == "btn0"){
+        statusTemp[0] = 0;
+        unesi();
+    }else if(idBotuna == "btn1"){
+        statusTemp[1] = 0;
+        unesi();
+    }else if(idBotuna == "btn2"){
+        statusTemp[2] = 0;
+        unesi();
+    }else if(idBotuna == "btn3"){
+        statusTemp[3] = 0;
+        unesi();
+    }else if(idBotuna == "btn4"){
+        statusTemp[4] = 0;
+        unesi();
+    }else if(idBotuna == "btn5"){
+        statusTemp[5] = 0;
+        unesi();
+    }else if(idBotuna == "btn6"){
+        statusTemp[6] = 0;
+        unesi();
+    }else if(idBotuna == "btn7"){
+        statusTemp[7] = 0;
+        unesi();
+    }
     activeNum--;
-    checkActive();
+    //checkActive();
+    readDB();
 }
-function checkActive(){
-    if(activeNum == 1){
-        app.winner();
-        window.location.reload(true);
+//+++++++++++++++++++++               WHO'S THE WINNER              ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+function readDB(tx){
+    db = openDB();
+    db.transaction(function (tx){
+        //navigator.notification.alert("getRecords");
+        tx.executeSql("SELECT * FROM player", [], checkActive, resultError);
+    }, transactionfault, transactionsucces );
+}
+function checkActive(tx, response){
+    for(var i=0; i<statusTemp.length;i++){
+        console.log(statusTemp[i]);
+        if(statusTemp[i] == 1 && activeNum == 1){
+            app.winner(response.rows.item(i).name);
+            window.location.reload(true);
+        }
     }
 }

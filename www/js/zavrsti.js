@@ -5,6 +5,12 @@ var poljeElemenata;
 var rez = '';
 
 var mymedia = null;
+$(document).ready(function () {
+    $("#botunt").on("click", function() {
+        $(this).attr("disabled", "disabled");
+        ide();
+    });
+});
 
 function ide(){
 	//console.log("usli");
@@ -149,6 +155,7 @@ function uvecajSmanji(){
 			}	
 		}
 	}
+	setTimeout('$("#botunt").removeAttr("disabled")', 200);
 }
 //funkcija cita string dobivenog rezultata random funkcije
 //i postavlja rezultat u privremene varijable

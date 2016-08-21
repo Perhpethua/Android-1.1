@@ -57,11 +57,11 @@ var app = {
             'Great' //button name
         );
     }, 
-    winner: function(){
+    winner: function(ime){
         function alertDismissed(){
         }
         navigator.notification.alert(
-                                     'Last man standing', 
+                                     ime, 
                                      alertDismissed, 
                                      'WINNER!!', 
                                      'OK');
