@@ -15,7 +15,7 @@ $(document).ready(function () {
 function ide(){
 	//console.log("usli");
 	document.getElementById("back").style.display = "none";
-	document.body.style.backgroundColor = "#484848";//changes color when spinning
+	//document.body.style.backgroundColor = "#484848";//changes color when spinning
 	elem1 = document.getElementById("zuta");//zuta
 	elem2 = document.getElementById("crvena");//crvena
 	elem3 = document.getElementById("plava");//plava
