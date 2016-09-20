@@ -56,11 +56,8 @@ var randombr;
 function randomf(max){
 	return Math.floor(Math.random() * max);
 }
-//console.log(randomf(1, 10));
-//console.log(Math.floor(Math.random()*(10-1)+1));
 
-
-function twist(){ //poziva je button
+function twist(){ //poziva je funkcija staPise()
 	provjeriUdove();
 	return radno_polje[randombr];
 	
@@ -85,10 +82,7 @@ function provjeriUdove(){
 	//console.log(radno_polje);
 
 	randombr = randomf(radno_polje.length - 1);
-	while(radno_polje[randombr] == lr || radno_polje[randombr] == dr || radno_polje[randombr] == dn || radno_polje[randombr] == ln)
-	{
-		randombr = randomf(radno_polje.length - 1);
-	}
+	//console.log(radno_polje.length-1);
 	//console.log(radno_polje[randombr]);
 	globalUdovi();
 	//console.log(randombr);

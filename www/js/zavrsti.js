@@ -5,6 +5,7 @@ var poljeElemenata;
 var rez = '';
 
 var mymedia = null;
+//pozivanje funkcije ide() - kad je botun twist kliknut
 $(document).ready(function () {
     $("#botunt").on("click", function() {
         $(this).attr("disabled", "disabled");
@@ -64,7 +65,6 @@ function rotateAnimation(setspeed){
 		var i = 0;
 		for (i; i < poljeElemenata.length ; i++){
 			poljeElemenata[i].style.MozTransform = "rotate("+degrees+"deg)";
-		
 			if(poljeElemenata[i] == lijruk || poljeElemenata[i] == elem2){//lijeva ruka i crvena (na istoj su strani)
 				poljeElemenata[i].style.MozTransformOrigin = "100% 100%";
 			}else if(poljeElemenata[i] == desruk || poljeElemenata[i] == elem4){//desna ruka i zelena (na istoj su strani)
@@ -79,7 +79,6 @@ function rotateAnimation(setspeed){
 		var i = 0;
 		for (i; i < poljeElemenata.length ; i++){
 			poljeElemenata[i].style.msTransform = "rotate("+degrees+"deg)";
-			
 			if(poljeElemenata[i] == lijruk || poljeElemenata[i] == elem2){//lijeva ruka i crvena (na istoj su strani)
 				poljeElemenata[i].style.msTransformOrigin = "100% 100%";
 			}else if(poljeElemenata[i] == desruk || poljeElemenata[i] == elem4){//desna ruka i zelena (na istoj su strani)
@@ -108,7 +107,6 @@ function rotateAnimation(setspeed){
 		var i = 0;
 		for( i; i < poljeElemenata.length; i++){
 			poljeElemenata[i].style.transform = "rotate("+degrees+"deg)";
-			
 			if(poljeElemenata[i] == lijruk || poljeElemenata[i] == elem2){//lijeva ruka i crvena (na istoj su strani)
 				poljeElemenata[i].style.transformOrigin = "100% 100%";
 			}else if(poljeElemenata[i] == desruk || poljeElemenata[i] == elem4){//desna ruka i zelena (na istoj su strani)
@@ -121,19 +119,16 @@ function rotateAnimation(setspeed){
 		}
 	}
 	
-		
 	looper = setTimeout('rotateAnimation('+setspeed+')',setspeed);
 	degrees++;
 
 	if(degrees == 361){
 		clearTimeout(looper);
 		degrees = 0;
-		//staPise();
 		//console.log(poljeElemenata);
 		uvecajSmanji();
 	}
 }
-
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/	
 function uvecajSmanji(){
 	staPise();
